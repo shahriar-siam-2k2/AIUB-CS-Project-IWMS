@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "91iPC9jCV5U=",
+  "dgSpecHash": "IOeZT0Y3DRw=",
   "success": true,
-  "projectFilePath": "H:\\Codings\\Programming\\IWMS\\IWMS.csproj",
+  "projectFilePath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shahr\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\shahr\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.1\\microsoft.data.sqlclient.7.0.1.nupkg.sha512",
@@ -30,9 +30,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Package 'Microsoft.Data.SqlClient.SNI 6.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net10.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "H:\\Codings\\Programming\\IWMS\\IWMS.csproj",
+      "projectPath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
       "warningLevel": 1,
-      "filePath": "H:\\Codings\\Programming\\IWMS\\IWMS.csproj",
+      "filePath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
       "libraryId": "Microsoft.Data.SqlClient.SNI",
       "targetGraphs": [
         "net10.0-windows"

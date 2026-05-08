@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Codings\\Programming\\IWMS\\IWMS.csproj": {}
+    "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj": {}
   },
   "projects": {
-    "H:\\Codings\\Programming\\IWMS\\IWMS.csproj": {
+    "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Codings\\Programming\\IWMS\\IWMS.csproj",
+        "projectUniqueName": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
         "projectName": "IWMS",
-        "projectPath": "H:\\Codings\\Programming\\IWMS\\IWMS.csproj",
+        "projectPath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
         "packagesPath": "C:\\Users\\shahr\\.nuget\\packages\\",
-        "outputPath": "H:\\Codings\\Programming\\IWMS\\obj\\",
+        "outputPath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "H:\\Microsoft Visual Studio18\\Shared\\NuGetPackages"
