@@ -1,1 +1,1 @@
-# AIUB-CS-Project-IWMS
+# Inventory and Warhouse Management System
