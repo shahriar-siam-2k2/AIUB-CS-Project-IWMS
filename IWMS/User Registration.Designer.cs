@@ -222,7 +222,7 @@
             // 
             lblGender.AutoSize = true;
             lblGender.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGender.Location = new Point(134, 546);
+            lblGender.Location = new Point(134, 549);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(73, 22);
             lblGender.TabIndex = 18;
@@ -233,7 +233,7 @@
             // 
             rbMale.AutoSize = true;
             rbMale.Font = new Font("Trebuchet MS", 12F);
-            rbMale.Location = new Point(226, 546);
+            rbMale.Location = new Point(226, 549);
             rbMale.Name = "rbMale";
             rbMale.Size = new Size(60, 26);
             rbMale.TabIndex = 19;
@@ -245,7 +245,7 @@
             // 
             rbFemale.AutoSize = true;
             rbFemale.Font = new Font("Trebuchet MS", 12F);
-            rbFemale.Location = new Point(310, 546);
+            rbFemale.Location = new Point(310, 549);
             rbFemale.Name = "rbFemale";
             rbFemale.Size = new Size(79, 26);
             rbFemale.TabIndex = 20;
@@ -266,11 +266,15 @@
             // 
             // dtpDOB
             // 
-            dtpDOB.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dtpDOB.Location = new Point(206, 505);
+            dtpDOB.AllowDrop = true;
+            dtpDOB.CalendarFont = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDOB.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDOB.Format = DateTimePickerFormat.Short;
+            dtpDOB.Location = new Point(206, 501);
             dtpDOB.MaxDate = new DateTime(2026, 4, 27, 14, 42, 27, 0);
             dtpDOB.Name = "dtpDOB";
-            dtpDOB.Size = new Size(200, 21);
+            dtpDOB.RightToLeft = RightToLeft.No;
+            dtpDOB.Size = new Size(200, 26);
             dtpDOB.TabIndex = 22;
             dtpDOB.Value = new DateTime(2026, 4, 27, 0, 0, 0, 0);
             // 
@@ -299,7 +303,7 @@
             // 
             rbOthers.AutoSize = true;
             rbOthers.Font = new Font("Trebuchet MS", 12F);
-            rbOthers.Location = new Point(408, 546);
+            rbOthers.Location = new Point(408, 549);
             rbOthers.Name = "rbOthers";
             rbOthers.Size = new Size(75, 26);
             rbOthers.TabIndex = 25;
@@ -430,7 +434,7 @@
             lblDOBError.AutoSize = true;
             lblDOBError.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDOBError.ForeColor = Color.Red;
-            lblDOBError.Location = new Point(205, 526);
+            lblDOBError.Location = new Point(205, 529);
             lblDOBError.Name = "lblDOBError";
             lblDOBError.Size = new Size(142, 18);
             lblDOBError.TabIndex = 29;
@@ -442,7 +446,7 @@
             lblGenderEmpty.AutoSize = true;
             lblGenderEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblGenderEmpty.ForeColor = Color.Red;
-            lblGenderEmpty.Location = new Point(206, 568);
+            lblGenderEmpty.Location = new Point(206, 571);
             lblGenderEmpty.Name = "lblGenderEmpty";
             lblGenderEmpty.Size = new Size(100, 18);
             lblGenderEmpty.TabIndex = 29;
