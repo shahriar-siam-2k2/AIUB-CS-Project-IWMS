@@ -420,9 +420,9 @@
             lblPhoneEmpty.ForeColor = Color.Red;
             lblPhoneEmpty.Location = new Point(205, 378);
             lblPhoneEmpty.Name = "lblPhoneEmpty";
-            lblPhoneEmpty.Size = new Size(126, 18);
+            lblPhoneEmpty.Size = new Size(189, 18);
             lblPhoneEmpty.TabIndex = 29;
-            lblPhoneEmpty.Text = "This field is required!";
+            lblPhoneEmpty.Text = "Phone number must be 11 digits!";
             lblPhoneEmpty.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDOBError

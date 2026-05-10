@@ -78,7 +78,7 @@ namespace IWMS
         {
             
 
-            if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || mtbPhone.Text == "" || rTxtAddress.Text == "" ||
+            if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || !mtbPhone.MaskCompleted || rTxtAddress.Text == "" ||
               comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
               )
             {
@@ -127,7 +127,7 @@ namespace IWMS
                     lblEmailEmpty.Hide();
                 }
 
-                if (mtbPhone.Text == "")
+                if (!mtbPhone.MaskCompleted)
                 {
                     lblPhoneEmpty.Show();
                 }
