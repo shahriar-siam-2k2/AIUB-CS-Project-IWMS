@@ -53,6 +53,7 @@
             rbOthers = new RadioButton();
             rTxtAddress = new RichTextBox();
             lblAddress = new Label();
+            btnCancel = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -261,7 +262,7 @@
             // 
             btnRegister.BackColor = Color.Cyan;
             btnRegister.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegister.Location = new Point(194, 660);
+            btnRegister.Location = new Point(93, 659);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(145, 45);
             btnRegister.TabIndex = 23;
@@ -310,11 +311,25 @@
             lblAddress.Text = "Address :";
             lblAddress.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = Color.FromArgb(255, 128, 128);
+            btnCancel.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(310, 659);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(145, 45);
+            btnCancel.TabIndex = 28;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(btnCancel);
             Controls.Add(lblAddress);
             Controls.Add(rTxtAddress);
             Controls.Add(rbOthers);
@@ -374,5 +389,6 @@
         private RadioButton rbOthers;
         private RichTextBox rTxtAddress;
         private Label lblAddress;
+        private Button btnCancel;
     }
 }

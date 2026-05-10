@@ -32,7 +32,7 @@ namespace IWMS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || mtbPhone.Text == "" || rTxtAddress.Text == "" || 
+            if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || mtbPhone.Text == "" || rTxtAddress.Text == "" ||
               comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
               )
             {
@@ -100,6 +100,13 @@ namespace IWMS
         private void User_Registration_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Start st = new Start();
+            st.Show();
+            this.Hide();
         }
     }
 }
