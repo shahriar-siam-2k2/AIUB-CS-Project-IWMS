@@ -30,12 +30,14 @@
         {
             lblTitle = new Label();
             lblSubtitle = new Label();
-            lblUserID = new Label();
+            lblUserName = new Label();
             lblUserPass = new Label();
-            txtUserID = new TextBox();
-            txtPass = new TextBox();
+            txtUserName = new TextBox();
+            txtUserPass = new TextBox();
             btnLogin = new Button();
             btnCancel = new Button();
+            lblUserEmpty = new Label();
+            lblPassEmpty = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -59,16 +61,16 @@
             lblSubtitle.Text = "Member Login";
             lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblUserID
+            // lblUserName
             // 
-            lblUserID.AutoSize = true;
-            lblUserID.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUserID.Location = new Point(106, 132);
-            lblUserID.Name = "lblUserID";
-            lblUserID.Size = new Size(66, 22);
-            lblUserID.TabIndex = 3;
-            lblUserID.Text = "UserID :";
-            lblUserID.TextAlign = ContentAlignment.MiddleCenter;
+            lblUserName.AutoSize = true;
+            lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserName.Location = new Point(106, 132);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(92, 22);
+            lblUserName.TabIndex = 3;
+            lblUserName.Text = "UserName :";
+            lblUserName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblUserPass
             // 
@@ -81,19 +83,19 @@
             lblUserPass.Text = "Password :";
             lblUserPass.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtUserID
+            // txtUserName
             // 
-            txtUserID.Location = new Point(110, 157);
-            txtUserID.Name = "txtUserID";
-            txtUserID.Size = new Size(263, 23);
-            txtUserID.TabIndex = 5;
+            txtUserName.Location = new Point(110, 157);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Size = new Size(263, 23);
+            txtUserName.TabIndex = 5;
             // 
-            // txtPass
+            // txtUserPass
             // 
-            txtPass.Location = new Point(110, 239);
-            txtPass.Name = "txtPass";
-            txtPass.Size = new Size(263, 23);
-            txtPass.TabIndex = 6;
+            txtUserPass.Location = new Point(110, 239);
+            txtUserPass.Name = "txtUserPass";
+            txtUserPass.Size = new Size(263, 23);
+            txtUserPass.TabIndex = 6;
             // 
             // btnLogin
             // 
@@ -119,6 +121,31 @@
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // lblUserEmpty
+            // 
+            lblUserEmpty.AutoSize = true;
+            lblUserEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserEmpty.ForeColor = Color.Red;
+            lblUserEmpty.Location = new Point(110, 183);
+            lblUserEmpty.Name = "lblUserEmpty";
+            lblUserEmpty.Size = new Size(126, 18);
+            lblUserEmpty.TabIndex = 9;
+            lblUserEmpty.Text = "This field is required!";
+            lblUserEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblPassEmpty
+            // 
+            lblPassEmpty.AutoSize = true;
+            lblPassEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPassEmpty.ForeColor = Color.Red;
+            lblPassEmpty.Location = new Point(110, 265);
+            lblPassEmpty.Name = "lblPassEmpty";
+            lblPassEmpty.Size = new Size(126, 18);
+            lblPassEmpty.TabIndex = 10;
+            lblPassEmpty.Text = "This field is required!";
+            lblPassEmpty.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Login
             // 
@@ -126,16 +153,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
             ClientSize = new Size(485, 450);
+            Controls.Add(lblPassEmpty);
+            Controls.Add(lblUserEmpty);
             Controls.Add(btnCancel);
             Controls.Add(btnLogin);
-            Controls.Add(txtPass);
-            Controls.Add(txtUserID);
+            Controls.Add(txtUserPass);
+            Controls.Add(txtUserName);
             Controls.Add(lblUserPass);
-            Controls.Add(lblUserID);
+            Controls.Add(lblUserName);
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "Login";
-            Text = "Login";
+            Text = "IWMS - Login";
             Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -145,11 +174,13 @@
 
         private Label lblTitle;
         private Label lblSubtitle;
-        private Label lblUserID;
+        private Label lblUserName;
         private Label lblUserPass;
-        private TextBox txtUserID;
-        private TextBox txtPass;
+        private TextBox txtUserName;
+        private TextBox txtUserPass;
         private Button btnLogin;
         private Button btnCancel;
+        private Label lblUserEmpty;
+        private Label lblPassEmpty;
     }
 }

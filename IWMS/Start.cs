@@ -18,5 +18,12 @@ namespace IWMS
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Hide();
+        }
     }
 }

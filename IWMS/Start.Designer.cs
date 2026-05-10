@@ -55,6 +55,7 @@
             btnLogin.TabIndex = 1;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnRegister
             // 
@@ -91,7 +92,7 @@
             Controls.Add(btnLogin);
             Controls.Add(lblTitle);
             Name = "Start";
-            Text = "Form1";
+            Text = "IWMS - Start";
             ResumeLayout(false);
             PerformLayout();
         }
