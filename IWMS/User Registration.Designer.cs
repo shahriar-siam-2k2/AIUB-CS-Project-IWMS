@@ -64,6 +64,7 @@
             lblDOBError = new Label();
             lblGenderEmpty = new Label();
             lblRoleEmpty = new Label();
+            lblInvalidEmail = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -465,11 +466,24 @@
             lblRoleEmpty.Text = "Select a role!";
             lblRoleEmpty.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblInvalidEmail
+            // 
+            lblInvalidEmail.AutoSize = true;
+            lblInvalidEmail.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInvalidEmail.ForeColor = Color.Red;
+            lblInvalidEmail.Location = new Point(206, 330);
+            lblInvalidEmail.Name = "lblInvalidEmail";
+            lblInvalidEmail.Size = new Size(102, 18);
+            lblInvalidEmail.TabIndex = 30;
+            lblInvalidEmail.Text = "Enter valid email!";
+            lblInvalidEmail.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(lblInvalidEmail);
             Controls.Add(lblPhoneEmpty);
             Controls.Add(lblRoleEmpty);
             Controls.Add(lblGenderEmpty);
@@ -552,5 +566,6 @@
         private Label lblDOBError;
         private Label lblGenderEmpty;
         private Label lblRoleEmpty;
+        private Label lblInvalidEmail;
     }
 }

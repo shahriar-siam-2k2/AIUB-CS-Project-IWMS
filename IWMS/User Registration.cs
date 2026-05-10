@@ -120,10 +120,20 @@ namespace IWMS
 
                 if (txtEmail.Text == "")
                 {
+                    lblInvalidEmail.Hide();
                     lblEmailEmpty.Show();
                 }
                 else
                 {
+                    if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains(".") )
+                    {
+                        lblInvalidEmail.Show();
+                    }
+                    else
+                    {
+                        lblInvalidEmail.Hide();
+                    }
+
                     lblEmailEmpty.Hide();
                 }
 
@@ -248,6 +258,7 @@ namespace IWMS
             lblDOBError.Hide();
             lblGenderEmpty.Hide();
             lblRoleEmpty.Hide();
+            lblInvalidEmail.Hide();
         }
 
         private void User_Registration_Load(object sender, EventArgs e)
