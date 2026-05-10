@@ -164,6 +164,7 @@
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Login";
             Load += Login_Load;
             ResumeLayout(false);

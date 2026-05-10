@@ -356,6 +356,7 @@
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "User_Registration";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - User Registration";
             Load += User_Registration_Load;
             ResumeLayout(false);

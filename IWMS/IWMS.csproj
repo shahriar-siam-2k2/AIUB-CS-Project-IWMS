@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.Data.SqlClient.SNI" Version="6.0.2" />
   </ItemGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="taskkill /f /fi &quot;status eq running&quot; /im IWMS.exe &gt;nul 2&gt;&amp;1 &amp; exit 0" />
+  </Target>
+
 </Project>

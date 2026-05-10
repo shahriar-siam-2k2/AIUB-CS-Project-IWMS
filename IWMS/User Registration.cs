@@ -15,6 +15,31 @@ namespace IWMS
         string fullName, userName, pass, confPass, email, phone, address, gender, role;
         DateTime dob;
 
+        private void ClearAllFields(Control container)
+        {
+            foreach (Control c in container.Controls)
+            {
+                if (c is TextBox txt) txt.Clear();
+                else if (c is RichTextBox rtxt) rtxt.Clear();
+                else if (c is MaskedTextBox mtxt) mtxt.Clear();
+                else if (c is ComboBox cmb) cmb.SelectedIndex = -1;
+                else if (c is DateTimePicker dtp)
+                {
+                    DateTime safeDate = DateTime.Now;
+
+                    if (safeDate > dtp.MaxDate) safeDate = dtp.MaxDate;
+                    else if (safeDate < dtp.MinDate) safeDate = dtp.MinDate;
+
+                    dtp.Value = safeDate;
+                }
+                else if (c is RadioButton rb) rb.Checked = false;
+
+                if (c.HasChildren)
+                {
+                    ClearAllFields(c);
+                }
+            }
+        }
         public User_Registration()
         {
             InitializeComponent();
@@ -93,6 +118,8 @@ namespace IWMS
                                      $"Role: {role}\n\n";
 
                 MessageBox.Show(message);
+
+                ClearAllFields(this);
             }
 
         }

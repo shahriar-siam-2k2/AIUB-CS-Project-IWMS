@@ -92,6 +92,7 @@
             Controls.Add(btnLogin);
             Controls.Add(lblTitle);
             Name = "Start";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Start";
             ResumeLayout(false);
             PerformLayout();
