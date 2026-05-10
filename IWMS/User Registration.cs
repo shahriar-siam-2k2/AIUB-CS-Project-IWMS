@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.Data.SqlClient;
 
 namespace IWMS
 {
@@ -41,6 +41,24 @@ namespace IWMS
                 }
             }
         }
+
+        private bool checkAgeError()
+        {
+            dob = dtpDOB.Value;
+            age = DateTime.Today.Year - dob.Year;
+
+            if (age < 18)
+            {
+                lblDOBError.Show();
+                return true;
+            }
+            else
+            {
+                lblDOBError.Hide();
+                return false;
+            }
+        }
+
         public User_Registration()
         {
             InitializeComponent();
@@ -58,8 +76,7 @@ namespace IWMS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            dob = dtpDOB.Value;
-            age = DateTime.Today.Year - dob.Year;
+            
 
             if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || mtbPhone.Text == "" || rTxtAddress.Text == "" ||
               comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
@@ -128,14 +145,7 @@ namespace IWMS
                     lblAddressEmpty.Hide();
                 }
 
-                if (age < 18)
-                {
-                    lblDOBError.Show();
-                }
-                else
-                {
-                    lblDOBError.Hide();
-                }
+                checkAgeError();
 
                 if (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
                 {
@@ -162,6 +172,13 @@ namespace IWMS
             }
             else
             {
+                hideAllErrorLabels();
+                
+                if(checkAgeError())
+                {
+                    return;
+                }
+
                 fullName = txtFullName.Text;
                 userName = txtUserName.Text;
                 pass = txtPass.Text;
@@ -219,7 +236,7 @@ namespace IWMS
 
         }
 
-        private void User_Registration_Load(object sender, EventArgs e)
+        private void hideAllErrorLabels()
         {
             lblNameEmpty.Hide();
             lblUserEmpty.Hide();
@@ -231,6 +248,11 @@ namespace IWMS
             lblDOBError.Hide();
             lblGenderEmpty.Hide();
             lblRoleEmpty.Hide();
+        }
+
+        private void User_Registration_Load(object sender, EventArgs e)
+        {
+            hideAllErrorLabels();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
