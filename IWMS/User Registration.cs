@@ -44,17 +44,52 @@ namespace IWMS
 
         private bool checkAgeError()
         {
-            dob = dtpDOB.Value;
-            age = DateTime.Today.Year - dob.Year;
+            DateTime dob = dtpDOB.Value;
 
-            if (age < 18)
+            // 1. Calculate the exact age correctly
+            int age = DateTime.Today.Year - dob.Year;
+            if (dob.Date > DateTime.Today.AddYears(-age))
             {
-                lblDOBError.Show();
+                // Subtract a year if their birthday hasn't occurred yet this year
+                age--;
+            }
+
+            // 2. Hide error labels by default at the start of the check
+            lblDOBEmpty.Hide();
+            lblDOBError.Hide();
+
+            // 3. Evaluate the age
+            if (age < 0)
+            {
+                // Handle scenario where user picks a date in the future
+                lblAge.Text = "Invalid Date (Future)";
+                lblAge.ForeColor = Color.Red;
+                lblAge.Show();
+                return true;
+            }
+            else if (age < 18)
+            {
+                // If the date is exactly today, you might assume they haven't picked one yet
+                if (age == 0 && dob.Date == DateTime.Today)
+                {
+                    lblAge.Hide();
+                    lblDOBEmpty.Show();
+                }
+                else
+                {
+                    lblAge.Text = "Age: " + age.ToString() + " year(s)";
+                    lblAge.ForeColor = Color.Red;
+                    lblAge.Show();
+                    lblDOBError.Show(); // Assuming you want this to show for under 18
+                }
                 return true;
             }
             else
             {
-                lblDOBError.Hide();
+                // Valid age (18 or older)
+                lblAge.Text = "Age: " + age.ToString() + " year(s)";
+                lblAge.ForeColor = Color.Green;
+                lblAge.Show();
                 return false;
             }
         }
@@ -76,7 +111,7 @@ namespace IWMS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+
 
             if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || !mtbPhone.MaskCompleted || rTxtAddress.Text == "" ||
               comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
@@ -125,7 +160,7 @@ namespace IWMS
                 }
                 else
                 {
-                    if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains(".") )
+                    if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
                     {
                         lblInvalidEmail.Show();
                     }
@@ -183,8 +218,8 @@ namespace IWMS
             else
             {
                 hideAllErrorLabels();
-                
-                if(checkAgeError())
+
+                if (checkAgeError())
                 {
                     return;
                 }
@@ -197,7 +232,7 @@ namespace IWMS
                 phone = mtbPhone.Text;
                 address = rTxtAddress.Text;
                 role = comboRole.Text;
-                                
+
                 if (rbMale.Checked)
                     gender = "Male";
                 else if (rbFemale.Checked)
@@ -259,6 +294,7 @@ namespace IWMS
             lblGenderEmpty.Hide();
             lblRoleEmpty.Hide();
             lblInvalidEmail.Hide();
+            lblDOBEmpty.Hide();
         }
 
         private void User_Registration_Load(object sender, EventArgs e)
@@ -271,6 +307,11 @@ namespace IWMS
             Start st = new Start();
             st.Show();
             this.Hide();
+        }
+
+        private void dtpDOB_ValueChanged(object sender, EventArgs e)
+        {
+            checkAgeError();
         }
     }
 }

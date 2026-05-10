@@ -65,6 +65,8 @@
             lblGenderEmpty = new Label();
             lblRoleEmpty = new Label();
             lblInvalidEmail = new Label();
+            lblAge = new Label();
+            lblDOBEmpty = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -278,6 +280,7 @@
             dtpDOB.Size = new Size(200, 26);
             dtpDOB.TabIndex = 22;
             dtpDOB.Value = new DateTime(2026, 4, 27, 0, 0, 0, 0);
+            dtpDOB.ValueChanged += dtpDOB_ValueChanged;
             // 
             // btnRegister
             // 
@@ -478,11 +481,35 @@
             lblInvalidEmail.Text = "Enter valid email!";
             lblInvalidEmail.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblAge
+            // 
+            lblAge.AutoSize = true;
+            lblAge.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAge.Location = new Point(412, 504);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(0, 22);
+            lblAge.TabIndex = 31;
+            lblAge.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblDOBEmpty
+            // 
+            lblDOBEmpty.AutoSize = true;
+            lblDOBEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDOBEmpty.ForeColor = Color.Red;
+            lblDOBEmpty.Location = new Point(205, 528);
+            lblDOBEmpty.Name = "lblDOBEmpty";
+            lblDOBEmpty.Size = new Size(122, 18);
+            lblDOBEmpty.TabIndex = 32;
+            lblDOBEmpty.Text = "Select date of birth!";
+            lblDOBEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(lblDOBEmpty);
+            Controls.Add(lblAge);
             Controls.Add(lblInvalidEmail);
             Controls.Add(lblPhoneEmpty);
             Controls.Add(lblRoleEmpty);
@@ -567,5 +594,7 @@
         private Label lblGenderEmpty;
         private Label lblRoleEmpty;
         private Label lblInvalidEmail;
+        private Label lblAge;
+        private Label lblDOBEmpty;
     }
 }
