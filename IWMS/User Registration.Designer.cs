@@ -54,6 +54,16 @@
             rTxtAddress = new RichTextBox();
             lblAddress = new Label();
             btnCancel = new Button();
+            lblNameEmpty = new Label();
+            lblUserEmpty = new Label();
+            lblPassEmpty = new Label();
+            lblConfPassEmpty = new Label();
+            lblEmailEmpty = new Label();
+            lblAddressEmpty = new Label();
+            lblPhoneEmpty = new Label();
+            lblDOBError = new Label();
+            lblGenderEmpty = new Label();
+            lblRoleEmpty = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -157,49 +167,55 @@
             // 
             // txtFullName
             // 
+            txtFullName.Font = new Font("Trebuchet MS", 12F);
             txtFullName.Location = new Point(206, 102);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(204, 23);
+            txtFullName.Size = new Size(204, 26);
             txtFullName.TabIndex = 11;
             // 
             // txtUserName
             // 
+            txtUserName.Font = new Font("Trebuchet MS", 12F);
             txtUserName.Location = new Point(206, 154);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(204, 23);
+            txtUserName.Size = new Size(204, 26);
             txtUserName.TabIndex = 12;
             // 
             // txtPass
             // 
+            txtPass.Font = new Font("Trebuchet MS", 12F);
             txtPass.Location = new Point(206, 200);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
-            txtPass.Size = new Size(204, 23);
+            txtPass.Size = new Size(204, 26);
             txtPass.TabIndex = 13;
             // 
             // txtConfirmPass
             // 
+            txtConfirmPass.Font = new Font("Trebuchet MS", 12F);
             txtConfirmPass.Location = new Point(206, 254);
             txtConfirmPass.Name = "txtConfirmPass";
             txtConfirmPass.PasswordChar = '*';
-            txtConfirmPass.Size = new Size(204, 23);
+            txtConfirmPass.Size = new Size(204, 26);
             txtConfirmPass.TabIndex = 14;
             // 
             // txtEmail
             // 
+            txtEmail.Font = new Font("Trebuchet MS", 12F);
             txtEmail.Location = new Point(206, 302);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(204, 23);
+            txtEmail.Size = new Size(204, 26);
             txtEmail.TabIndex = 15;
             // 
             // comboRole
             // 
             comboRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboRole.Font = new Font("Trebuchet MS", 12F);
             comboRole.FormattingEnabled = true;
             comboRole.Items.AddRange(new object[] { "Admin", "Staff" });
             comboRole.Location = new Point(206, 596);
             comboRole.Name = "comboRole";
-            comboRole.Size = new Size(121, 23);
+            comboRole.Size = new Size(121, 30);
             comboRole.TabIndex = 17;
             // 
             // lblGender
@@ -293,6 +309,7 @@
             // 
             // rTxtAddress
             // 
+            rTxtAddress.Font = new Font("Trebuchet MS", 12F);
             rTxtAddress.Location = new Point(206, 403);
             rTxtAddress.Name = "rTxtAddress";
             rTxtAddress.Size = new Size(204, 71);
@@ -324,11 +341,141 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // lblNameEmpty
+            // 
+            lblNameEmpty.AutoSize = true;
+            lblNameEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNameEmpty.ForeColor = Color.Red;
+            lblNameEmpty.Location = new Point(206, 128);
+            lblNameEmpty.Name = "lblNameEmpty";
+            lblNameEmpty.Size = new Size(126, 18);
+            lblNameEmpty.TabIndex = 29;
+            lblNameEmpty.Text = "This field is required!";
+            lblNameEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblUserEmpty
+            // 
+            lblUserEmpty.AutoSize = true;
+            lblUserEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserEmpty.ForeColor = Color.Red;
+            lblUserEmpty.Location = new Point(206, 180);
+            lblUserEmpty.Name = "lblUserEmpty";
+            lblUserEmpty.Size = new Size(126, 18);
+            lblUserEmpty.TabIndex = 29;
+            lblUserEmpty.Text = "This field is required!";
+            lblUserEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblPassEmpty
+            // 
+            lblPassEmpty.AutoSize = true;
+            lblPassEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPassEmpty.ForeColor = Color.Red;
+            lblPassEmpty.Location = new Point(206, 226);
+            lblPassEmpty.Name = "lblPassEmpty";
+            lblPassEmpty.Size = new Size(126, 18);
+            lblPassEmpty.TabIndex = 29;
+            lblPassEmpty.Text = "This field is required!";
+            lblPassEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblConfPassEmpty
+            // 
+            lblConfPassEmpty.AutoSize = true;
+            lblConfPassEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblConfPassEmpty.ForeColor = Color.Red;
+            lblConfPassEmpty.Location = new Point(206, 280);
+            lblConfPassEmpty.Name = "lblConfPassEmpty";
+            lblConfPassEmpty.Size = new Size(126, 18);
+            lblConfPassEmpty.TabIndex = 29;
+            lblConfPassEmpty.Text = "This field is required!";
+            lblConfPassEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblEmailEmpty
+            // 
+            lblEmailEmpty.AutoSize = true;
+            lblEmailEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmailEmpty.ForeColor = Color.Red;
+            lblEmailEmpty.Location = new Point(205, 329);
+            lblEmailEmpty.Name = "lblEmailEmpty";
+            lblEmailEmpty.Size = new Size(126, 18);
+            lblEmailEmpty.TabIndex = 29;
+            lblEmailEmpty.Text = "This field is required!";
+            lblEmailEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblAddressEmpty
+            // 
+            lblAddressEmpty.AutoSize = true;
+            lblAddressEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAddressEmpty.ForeColor = Color.Red;
+            lblAddressEmpty.Location = new Point(206, 477);
+            lblAddressEmpty.Name = "lblAddressEmpty";
+            lblAddressEmpty.Size = new Size(126, 18);
+            lblAddressEmpty.TabIndex = 29;
+            lblAddressEmpty.Text = "This field is required!";
+            lblAddressEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblPhoneEmpty
+            // 
+            lblPhoneEmpty.AutoSize = true;
+            lblPhoneEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhoneEmpty.ForeColor = Color.Red;
+            lblPhoneEmpty.Location = new Point(205, 378);
+            lblPhoneEmpty.Name = "lblPhoneEmpty";
+            lblPhoneEmpty.Size = new Size(126, 18);
+            lblPhoneEmpty.TabIndex = 29;
+            lblPhoneEmpty.Text = "This field is required!";
+            lblPhoneEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblDOBError
+            // 
+            lblDOBError.AutoSize = true;
+            lblDOBError.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDOBError.ForeColor = Color.Red;
+            lblDOBError.Location = new Point(205, 526);
+            lblDOBError.Name = "lblDOBError";
+            lblDOBError.Size = new Size(142, 18);
+            lblDOBError.TabIndex = 29;
+            lblDOBError.Text = "Must be 18+ to register!";
+            lblDOBError.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblGenderEmpty
+            // 
+            lblGenderEmpty.AutoSize = true;
+            lblGenderEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGenderEmpty.ForeColor = Color.Red;
+            lblGenderEmpty.Location = new Point(206, 568);
+            lblGenderEmpty.Name = "lblGenderEmpty";
+            lblGenderEmpty.Size = new Size(100, 18);
+            lblGenderEmpty.TabIndex = 29;
+            lblGenderEmpty.Text = "Select a gender!";
+            lblGenderEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblRoleEmpty
+            // 
+            lblRoleEmpty.AutoSize = true;
+            lblRoleEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRoleEmpty.ForeColor = Color.Red;
+            lblRoleEmpty.Location = new Point(205, 628);
+            lblRoleEmpty.Name = "lblRoleEmpty";
+            lblRoleEmpty.Size = new Size(83, 18);
+            lblRoleEmpty.TabIndex = 29;
+            lblRoleEmpty.Text = "Select a role!";
+            lblRoleEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(lblPhoneEmpty);
+            Controls.Add(lblRoleEmpty);
+            Controls.Add(lblGenderEmpty);
+            Controls.Add(lblDOBError);
+            Controls.Add(lblAddressEmpty);
+            Controls.Add(lblEmailEmpty);
+            Controls.Add(lblConfPassEmpty);
+            Controls.Add(lblPassEmpty);
+            Controls.Add(lblUserEmpty);
+            Controls.Add(lblNameEmpty);
             Controls.Add(btnCancel);
             Controls.Add(lblAddress);
             Controls.Add(rTxtAddress);
@@ -391,5 +538,15 @@
         private RichTextBox rTxtAddress;
         private Label lblAddress;
         private Button btnCancel;
+        private Label lblNameEmpty;
+        private Label lblUserEmpty;
+        private Label lblPassEmpty;
+        private Label lblConfPassEmpty;
+        private Label lblEmailEmpty;
+        private Label lblAddressEmpty;
+        private Label lblPhoneEmpty;
+        private Label lblDOBError;
+        private Label lblGenderEmpty;
+        private Label lblRoleEmpty;
     }
 }

@@ -14,6 +14,7 @@ namespace IWMS
     {
         string fullName, userName, pass, confPass, email, phone, address, gender, role;
         DateTime dob;
+        int age;
 
         private void ClearAllFields(Control container)
         {
@@ -57,12 +58,107 @@ namespace IWMS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            dob = dtpDOB.Value;
+            age = DateTime.Today.Year - dob.Year;
+
             if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || mtbPhone.Text == "" || rTxtAddress.Text == "" ||
               comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
               )
             {
-                MessageBox.Show("Please fill all the fields and select a gender.");
-                return;
+                if (txtFullName.Text == "")
+                {
+                    lblNameEmpty.Show();
+                }
+                else
+                {
+                    lblNameEmpty.Hide();
+                }
+
+                if (txtUserName.Text == "")
+                {
+                    lblUserEmpty.Show();
+                }
+                else
+                {
+                    lblUserEmpty.Hide();
+                }
+
+                if (txtPass.Text == "")
+                {
+                    lblPassEmpty.Show();
+                }
+                else
+                {
+                    lblPassEmpty.Hide();
+                }
+
+                if (txtConfirmPass.Text == "")
+                {
+                    lblConfPassEmpty.Show();
+                }
+                else
+                {
+                    lblConfPassEmpty.Hide();
+                }
+
+                if (txtEmail.Text == "")
+                {
+                    lblEmailEmpty.Show();
+                }
+                else
+                {
+                    lblEmailEmpty.Hide();
+                }
+
+                if (mtbPhone.Text == "")
+                {
+                    lblPhoneEmpty.Show();
+                }
+                else
+                {
+                    lblPhoneEmpty.Hide();
+                }
+
+                if (rTxtAddress.Text == "")
+                {
+                    lblAddressEmpty.Show();
+                }
+                else
+                {
+                    lblAddressEmpty.Hide();
+                }
+
+                if (age < 18)
+                {
+                    lblDOBError.Show();
+                }
+                else
+                {
+                    lblDOBError.Hide();
+                }
+
+                if (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
+                {
+                    lblGenderEmpty.Show();
+                }
+                else
+                {
+                    lblGenderEmpty.Hide();
+                }
+
+                if (comboRole.Text == "")
+                {
+                    lblRoleEmpty.Show();
+                }
+                else
+                {
+                    lblRoleEmpty.Hide();
+                }
+
+
+
+                //MessageBox.Show("Please fill all the fields and select a gender.");
+                //return;
             }
             else
             {
@@ -73,9 +169,8 @@ namespace IWMS
                 email = txtEmail.Text;
                 phone = mtbPhone.Text;
                 address = rTxtAddress.Text;
-                dob = dtpDOB.Value;
                 role = comboRole.Text;
-
+                                
                 if (rbMale.Checked)
                     gender = "Male";
                 else if (rbFemale.Checked)
@@ -83,7 +178,7 @@ namespace IWMS
                 else if (rbOthers.Checked)
                     gender = "Others";
                 else
-                    gender = string.Empty;
+                    gender = "";
 
                 SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                 con.Open();
@@ -126,7 +221,16 @@ namespace IWMS
 
         private void User_Registration_Load(object sender, EventArgs e)
         {
-
+            lblNameEmpty.Hide();
+            lblUserEmpty.Hide();
+            lblPassEmpty.Hide();
+            lblConfPassEmpty.Hide();
+            lblEmailEmpty.Hide();
+            lblPhoneEmpty.Hide();
+            lblAddressEmpty.Hide();
+            lblDOBError.Hide();
+            lblGenderEmpty.Hide();
+            lblRoleEmpty.Hide();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
