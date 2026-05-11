@@ -44,6 +44,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = SystemColors.ButtonHighlight;
             lblTitle.Location = new Point(12, 35);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(465, 27);
@@ -54,6 +55,7 @@
             // 
             lblSubtitle.AutoSize = true;
             lblSubtitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSubtitle.ForeColor = SystemColors.ControlLight;
             lblSubtitle.Location = new Point(165, 86);
             lblSubtitle.Name = "lblSubtitle";
             lblSubtitle.Size = new Size(142, 27);
@@ -65,6 +67,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserName.ForeColor = SystemColors.ControlLight;
             lblUserName.Location = new Point(106, 132);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(92, 22);
@@ -76,6 +79,7 @@
             // 
             lblUserPass.AutoSize = true;
             lblUserPass.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserPass.ForeColor = SystemColors.ControlLight;
             lblUserPass.Location = new Point(107, 214);
             lblUserPass.Name = "lblUserPass";
             lblUserPass.Size = new Size(86, 22);
@@ -151,7 +155,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 255, 255);
+            BackColor = Color.Indigo;
             ClientSize = new Size(485, 450);
             Controls.Add(lblPassEmpty);
             Controls.Add(lblUserEmpty);
