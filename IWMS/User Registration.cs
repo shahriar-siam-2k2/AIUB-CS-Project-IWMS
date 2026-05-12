@@ -217,6 +217,8 @@ namespace IWMS
             }
             else
             {
+                dob = dtpDOB.Value;
+
                 hideAllErrorLabels();
 
                 if (checkAgeError())
