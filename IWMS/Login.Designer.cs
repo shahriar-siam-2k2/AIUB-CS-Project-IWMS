@@ -54,11 +54,11 @@
             // lblSubtitle
             // 
             lblSubtitle.AutoSize = true;
-            lblSubtitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSubtitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblSubtitle.ForeColor = SystemColors.ControlLight;
             lblSubtitle.Location = new Point(165, 86);
             lblSubtitle.Name = "lblSubtitle";
-            lblSubtitle.Size = new Size(142, 27);
+            lblSubtitle.Size = new Size(150, 27);
             lblSubtitle.TabIndex = 2;
             lblSubtitle.Text = "Member Login";
             lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -66,11 +66,11 @@
             // lblUserName
             // 
             lblUserName.AutoSize = true;
-            lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUserName.ForeColor = SystemColors.ControlLight;
             lblUserName.Location = new Point(106, 132);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(92, 22);
+            lblUserName.Size = new Size(98, 22);
             lblUserName.TabIndex = 3;
             lblUserName.Text = "UserName :";
             lblUserName.TextAlign = ContentAlignment.MiddleCenter;
@@ -78,11 +78,11 @@
             // lblUserPass
             // 
             lblUserPass.AutoSize = true;
-            lblUserPass.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserPass.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUserPass.ForeColor = SystemColors.ControlLight;
             lblUserPass.Location = new Point(107, 214);
             lblUserPass.Name = "lblUserPass";
-            lblUserPass.Size = new Size(86, 22);
+            lblUserPass.Size = new Size(92, 22);
             lblUserPass.TabIndex = 4;
             lblUserPass.Text = "Password :";
             lblUserPass.TextAlign = ContentAlignment.MiddleCenter;
