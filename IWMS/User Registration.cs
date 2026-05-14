@@ -15,7 +15,7 @@ namespace IWMS
         string fullName, userName, pass, confPass, email, phone, address, gender, role;
         DateTime dob;
         int age;
-        //ERO GORU
+     
         private void ClearAllFields(Control container)
         {
             foreach (Control c in container.Controls)
