@@ -29,6 +29,12 @@ namespace IWMS
             rbMale.Checked = false;
             rbFemale.Checked = false;
             rbOthers.Checked = false;
+
+            if (dtpDOB.MaxDate < DateTime.Today)
+            {
+                dtpDOB.MaxDate = DateTime.Today;
+            }
+
             dtpDOB.Value = DateTime.Today;
         }
 
@@ -205,7 +211,7 @@ namespace IWMS
             {
                 dob = dtpDOB.Value;
 
-                hideAllErrorLabels();
+                HideAllErrorLabels();
 
                 if (checkAgeError())
                 {
@@ -265,11 +271,12 @@ namespace IWMS
                 MessageBox.Show(message);
 
                 ClearAllFields();
+                HideAllErrorLabels();
             }
 
         }
 
-        private void hideAllErrorLabels()
+        private void HideAllErrorLabels()
         {
             lblNameEmpty.Hide();
             lblUserEmpty.Hide();
@@ -287,7 +294,7 @@ namespace IWMS
 
         private void User_Registration_Load(object sender, EventArgs e)
         {
-            hideAllErrorLabels();
+            HideAllErrorLabels();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
