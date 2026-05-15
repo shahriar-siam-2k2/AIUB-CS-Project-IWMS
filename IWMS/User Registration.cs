@@ -15,53 +15,38 @@ namespace IWMS
         string fullName, userName, pass, confPass, email, phone, address, gender, role;
         DateTime dob;
         int age;
-     
-        private void ClearAllFields(Control container)
+
+        private void ClearAllFields()
         {
-            foreach (Control c in container.Controls)
-            {
-                if (c is TextBox txt) txt.Clear();
-                else if (c is RichTextBox rtxt) rtxt.Clear();
-                else if (c is MaskedTextBox mtxt) mtxt.Clear();
-                else if (c is ComboBox cmb) cmb.SelectedIndex = -1;
-                else if (c is DateTimePicker dtp)
-                {
-                    DateTime safeDate = DateTime.Now;
-
-                    if (safeDate > dtp.MaxDate) safeDate = dtp.MaxDate;
-                    else if (safeDate < dtp.MinDate) safeDate = dtp.MinDate;
-
-                    dtp.Value = safeDate;
-                }
-                else if (c is RadioButton rb) rb.Checked = false;
-
-                if (c.HasChildren)
-                {
-                    ClearAllFields(c);
-                }
-            }
+            txtFullName.Clear();
+            txtUserName.Clear();
+            txtPass.Clear();
+            txtConfirmPass.Clear();
+            txtEmail.Clear();
+            rTxtAddress.Clear();
+            mtbPhone.Clear();
+            comboRole.SelectedIndex = -1;
+            rbMale.Checked = false;
+            rbFemale.Checked = false;
+            rbOthers.Checked = false;
+            dtpDOB.Value = DateTime.Today;
         }
 
         private bool checkAgeError()
         {
             DateTime dob = dtpDOB.Value;
 
-            // 1. Calculate the exact age correctly
             int age = DateTime.Today.Year - dob.Year;
             if (dob.Date > DateTime.Today.AddYears(-age))
             {
-                // Subtract a year if their birthday hasn't occurred yet this year
                 age--;
             }
 
-            // 2. Hide error labels by default at the start of the check
             lblDOBEmpty.Hide();
             lblDOBError.Hide();
 
-            // 3. Evaluate the age
             if (age < 0)
             {
-                // Handle scenario where user picks a date in the future
                 lblAge.Text = "Invalid Date (Future)";
                 lblAge.ForeColor = Color.Red;
                 lblAge.Show();
@@ -69,10 +54,10 @@ namespace IWMS
             }
             else if (age < 18)
             {
-                // If the date is exactly today, you might assume they haven't picked one yet
-                if (age == 0 && dob.Date == DateTime.Today)
+                if (age == 0)
                 {
                     lblAge.Hide();
+                    lblDOBError.Hide();
                     lblDOBEmpty.Show();
                 }
                 else
@@ -80,13 +65,14 @@ namespace IWMS
                     lblAge.Text = "Age: " + age.ToString() + " year(s)";
                     lblAge.ForeColor = Color.Red;
                     lblAge.Show();
-                    lblDOBError.Show(); // Assuming you want this to show for under 18
+
+                    lblDOBError.Text = "Must be 18+ to register";
+                    lblDOBError.Show();
                 }
                 return true;
             }
             else
             {
-                // Valid age (18 or older)
                 lblAge.Text = "Age: " + age.ToString() + " year(s)";
                 lblAge.ForeColor = Color.Green;
                 lblAge.Show();
@@ -278,7 +264,7 @@ namespace IWMS
 
                 MessageBox.Show(message);
 
-                ClearAllFields(this);
+                ClearAllFields();
             }
 
         }
