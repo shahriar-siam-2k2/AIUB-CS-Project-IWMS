@@ -67,6 +67,8 @@
             lblInvalidEmail = new Label();
             lblAge = new Label();
             lblDOBEmpty = new Label();
+            lblShowHidePass1 = new Label();
+            lblShowHidePass2 = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -189,18 +191,18 @@
             txtPass.Font = new Font("Trebuchet MS", 12F);
             txtPass.Location = new Point(206, 200);
             txtPass.Name = "txtPass";
-            txtPass.PasswordChar = '*';
             txtPass.Size = new Size(204, 26);
             txtPass.TabIndex = 13;
+            txtPass.UseSystemPasswordChar = true;
             // 
             // txtConfirmPass
             // 
             txtConfirmPass.Font = new Font("Trebuchet MS", 12F);
             txtConfirmPass.Location = new Point(206, 254);
             txtConfirmPass.Name = "txtConfirmPass";
-            txtConfirmPass.PasswordChar = '*';
             txtConfirmPass.Size = new Size(204, 26);
             txtConfirmPass.TabIndex = 14;
+            txtConfirmPass.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
@@ -438,7 +440,7 @@
             lblDOBError.AutoSize = true;
             lblDOBError.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDOBError.ForeColor = Color.Red;
-            lblDOBError.Location = new Point(205, 529);
+            lblDOBError.Location = new Point(205, 528);
             lblDOBError.Name = "lblDOBError";
             lblDOBError.Size = new Size(142, 18);
             lblDOBError.TabIndex = 29;
@@ -503,11 +505,41 @@
             lblDOBEmpty.Text = "Select date of birth!";
             lblDOBEmpty.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblShowHidePass1
+            // 
+            lblShowHidePass1.AutoSize = true;
+            lblShowHidePass1.BackColor = Color.Transparent;
+            lblShowHidePass1.Cursor = Cursors.Hand;
+            lblShowHidePass1.Location = new Point(412, 206);
+            lblShowHidePass1.Name = "lblShowHidePass1";
+            lblShowHidePass1.Size = new Size(36, 15);
+            lblShowHidePass1.TabIndex = 33;
+            lblShowHidePass1.Text = "Show";
+            lblShowHidePass1.Click += lblShowHidePass1_Click;
+            lblShowHidePass1.MouseEnter += lblShowHidePass1_MouseEnter;
+            lblShowHidePass1.MouseLeave += lblShowHidePass1_MouseLeave;
+            // 
+            // lblShowHidePass2
+            // 
+            lblShowHidePass2.AutoSize = true;
+            lblShowHidePass2.BackColor = Color.Transparent;
+            lblShowHidePass2.Cursor = Cursors.Hand;
+            lblShowHidePass2.Location = new Point(412, 260);
+            lblShowHidePass2.Name = "lblShowHidePass2";
+            lblShowHidePass2.Size = new Size(36, 15);
+            lblShowHidePass2.TabIndex = 34;
+            lblShowHidePass2.Text = "Show";
+            lblShowHidePass2.Click += lblShowHidePass2_Click;
+            lblShowHidePass2.MouseEnter += lblShowHidePass2_MouseEnter;
+            lblShowHidePass2.MouseLeave += lblShowHidePass2_MouseLeave;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(lblShowHidePass2);
+            Controls.Add(lblShowHidePass1);
             Controls.Add(lblDOBEmpty);
             Controls.Add(lblAge);
             Controls.Add(lblInvalidEmail);
@@ -596,5 +628,7 @@
         private Label lblInvalidEmail;
         private Label lblAge;
         private Label lblDOBEmpty;
+        private Label lblShowHidePass1;
+        private Label lblShowHidePass2;
     }
 }

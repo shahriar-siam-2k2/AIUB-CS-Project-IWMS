@@ -36,7 +36,7 @@ namespace IWMS
             }
 
             dtpDOB.Value = DateTime.Today;
-            
+
         }
 
         private bool checkAgeError()
@@ -295,6 +295,10 @@ namespace IWMS
 
         private void User_Registration_Load(object sender, EventArgs e)
         {
+            txtPass.UseSystemPasswordChar = true;
+            txtConfirmPass.UseSystemPasswordChar = true;
+            lblShowHidePass1.Text = "Show";
+            lblShowHidePass2.Text = "Show";
             HideAllErrorLabels();
         }
 
@@ -308,6 +312,54 @@ namespace IWMS
         private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
             checkAgeError();
+        }
+
+        private void lblShowHidePass1_Click(object sender, EventArgs e)
+        {
+            if (txtPass.UseSystemPasswordChar == true)
+            {
+                txtPass.UseSystemPasswordChar = false;
+                lblShowHidePass1.Text = "Hide";
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
+                lblShowHidePass1.Text = "Show";
+            }
+        }
+
+        private void lblShowHidePass2_Click(object sender, EventArgs e)
+        {
+            if (txtConfirmPass.UseSystemPasswordChar == true)
+            {
+                txtConfirmPass.UseSystemPasswordChar = false;
+                lblShowHidePass2.Text = "Hide";
+            }
+            else
+            {
+                txtConfirmPass.UseSystemPasswordChar = true;
+                lblShowHidePass2.Text = "Show";
+            }
+        }
+
+        private void lblShowHidePass1_MouseEnter(object sender, EventArgs e)
+        {
+            lblShowHidePass1.Font = new Font(lblShowHidePass1.Font, FontStyle.Underline);
+        }
+
+        private void lblShowHidePass1_MouseLeave(object sender, EventArgs e)
+        {
+            lblShowHidePass1.Font = new Font(lblShowHidePass1.Font, FontStyle.Regular);
+        }
+
+        private void lblShowHidePass2_MouseEnter(object sender, EventArgs e)
+        {
+            lblShowHidePass2.Font = new Font(lblShowHidePass2.Font, FontStyle.Underline);
+        }
+
+        private void lblShowHidePass2_MouseLeave(object sender, EventArgs e)
+        {
+            lblShowHidePass2.Font = new Font(lblShowHidePass2.Font, FontStyle.Regular);
         }
     }
 }
