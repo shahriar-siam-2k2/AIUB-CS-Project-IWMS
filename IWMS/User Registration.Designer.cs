@@ -69,6 +69,7 @@
             lblDOBEmpty = new Label();
             lblShowHidePass1 = new Label();
             lblShowHidePass2 = new Label();
+            lblConfPassError = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -533,11 +534,24 @@
             lblShowHidePass2.MouseEnter += lblShowHidePass2_MouseEnter;
             lblShowHidePass2.MouseLeave += lblShowHidePass2_MouseLeave;
             // 
+            // lblConfPassError
+            // 
+            lblConfPassError.AutoSize = true;
+            lblConfPassError.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblConfPassError.ForeColor = Color.Red;
+            lblConfPassError.Location = new Point(206, 281);
+            lblConfPassError.Name = "lblConfPassError";
+            lblConfPassError.Size = new Size(144, 18);
+            lblConfPassError.TabIndex = 35;
+            lblConfPassError.Text = "Password doesn't match!";
+            lblConfPassError.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // User_Registration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 736);
+            Controls.Add(lblConfPassError);
             Controls.Add(lblShowHidePass2);
             Controls.Add(lblShowHidePass1);
             Controls.Add(lblDOBEmpty);
@@ -630,5 +644,6 @@
         private Label lblDOBEmpty;
         private Label lblShowHidePass1;
         private Label lblShowHidePass2;
+        private Label lblConfPassError;
     }
 }

@@ -104,10 +104,8 @@ namespace IWMS
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
-
             if (txtFullName.Text == "" || txtUserName.Text == "" || txtPass.Text == "" || txtConfirmPass.Text == "" || txtEmail.Text == "" || !mtbPhone.MaskCompleted || rTxtAddress.Text == "" ||
-              comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked)
+              comboRole.Text == "" || (!rbMale.Checked && !rbFemale.Checked && !rbOthers.Checked || (txtConfirmPass.Text != "" && txtPass.Text != txtConfirmPass.Text))
               )
             {
                 if (txtFullName.Text == "")
@@ -144,6 +142,15 @@ namespace IWMS
                 else
                 {
                     lblConfPassEmpty.Hide();
+                }
+
+                if (txtConfirmPass.Text != "" && txtPass.Text != txtConfirmPass.Text)
+                {
+                    lblConfPassError.Show();
+                }
+                else
+                {
+                    lblConfPassError.Hide();
                 }
 
                 if (txtEmail.Text == "")
@@ -283,6 +290,7 @@ namespace IWMS
             lblUserEmpty.Hide();
             lblPassEmpty.Hide();
             lblConfPassEmpty.Hide();
+            lblConfPassError.Hide();
             lblEmailEmpty.Hide();
             lblPhoneEmpty.Hide();
             lblAddressEmpty.Hide();
