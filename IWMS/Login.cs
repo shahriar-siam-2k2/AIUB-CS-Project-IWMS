@@ -58,6 +58,8 @@ namespace IWMS
 
         private void Login_Load(object sender, EventArgs e)
         {
+            txtUserPass.UseSystemPasswordChar = true;
+            lblShowHidePass.Text = "Show";
             lblUserEmpty.Hide();
             lblPassEmpty.Hide();
         }
@@ -93,6 +95,30 @@ namespace IWMS
                 con.Close();
                 return -1;
             }
+        }
+
+        private void lblShowHidePass_Click(object sender, EventArgs e)
+        {
+            if (txtUserPass.UseSystemPasswordChar == true)
+            {
+                txtUserPass.UseSystemPasswordChar = false;
+                lblShowHidePass.Text = "Hide";
+            }
+            else
+            {
+                txtUserPass.UseSystemPasswordChar = true;
+                lblShowHidePass.Text = "Show";
+            }
+        }
+
+        private void lblShowHidePass_MouseEnter(object sender, EventArgs e)
+        {
+            lblShowHidePass.Font = new Font(lblShowHidePass.Font, FontStyle.Underline);
+        }
+
+        private void lblShowHidePass_MouseLeave(object sender, EventArgs e)
+        {
+            lblShowHidePass.Font = new Font(lblShowHidePass.Font, FontStyle.Regular);
         }
     }
 }

@@ -38,6 +38,7 @@
             btnCancel = new Button();
             lblUserEmpty = new Label();
             lblPassEmpty = new Label();
+            lblShowHidePass = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -89,21 +90,25 @@
             // 
             // txtUserName
             // 
+            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUserName.Location = new Point(110, 157);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(263, 23);
+            txtUserName.Size = new Size(263, 29);
             txtUserName.TabIndex = 5;
             // 
             // txtUserPass
             // 
+            txtUserPass.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUserPass.Location = new Point(110, 239);
             txtUserPass.Name = "txtUserPass";
-            txtUserPass.Size = new Size(263, 23);
+            txtUserPass.Size = new Size(263, 29);
             txtUserPass.TabIndex = 6;
+            txtUserPass.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             btnLogin.BackColor = Color.FromArgb(128, 255, 128);
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(175, 322);
             btnLogin.Name = "btnLogin";
@@ -116,6 +121,7 @@
             // btnCancel
             // 
             btnCancel.BackColor = Color.FromArgb(255, 128, 128);
+            btnCancel.Cursor = Cursors.Hand;
             btnCancel.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = SystemColors.ButtonHighlight;
             btnCancel.Location = new Point(175, 378);
@@ -132,7 +138,7 @@
             lblUserEmpty.AutoSize = true;
             lblUserEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUserEmpty.ForeColor = Color.Red;
-            lblUserEmpty.Location = new Point(110, 183);
+            lblUserEmpty.Location = new Point(107, 187);
             lblUserEmpty.Name = "lblUserEmpty";
             lblUserEmpty.Size = new Size(126, 18);
             lblUserEmpty.TabIndex = 9;
@@ -144,12 +150,26 @@
             lblPassEmpty.AutoSize = true;
             lblPassEmpty.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPassEmpty.ForeColor = Color.Red;
-            lblPassEmpty.Location = new Point(110, 265);
+            lblPassEmpty.Location = new Point(107, 270);
             lblPassEmpty.Name = "lblPassEmpty";
             lblPassEmpty.Size = new Size(126, 18);
             lblPassEmpty.TabIndex = 10;
             lblPassEmpty.Text = "This field is required!";
             lblPassEmpty.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblShowHidePass
+            // 
+            lblShowHidePass.AutoSize = true;
+            lblShowHidePass.BackColor = Color.White;
+            lblShowHidePass.Cursor = Cursors.Hand;
+            lblShowHidePass.Location = new Point(332, 245);
+            lblShowHidePass.Name = "lblShowHidePass";
+            lblShowHidePass.Size = new Size(36, 15);
+            lblShowHidePass.TabIndex = 11;
+            lblShowHidePass.Text = "Show";
+            lblShowHidePass.Click += lblShowHidePass_Click;
+            lblShowHidePass.MouseEnter += lblShowHidePass_MouseEnter;
+            lblShowHidePass.MouseLeave += lblShowHidePass_MouseLeave;
             // 
             // Login
             // 
@@ -157,6 +177,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Indigo;
             ClientSize = new Size(485, 450);
+            Controls.Add(lblShowHidePass);
             Controls.Add(lblPassEmpty);
             Controls.Add(lblUserEmpty);
             Controls.Add(btnCancel);
@@ -187,5 +208,6 @@
         private Button btnCancel;
         private Label lblUserEmpty;
         private Label lblPassEmpty;
+        private Label lblShowHidePass;
     }
 }

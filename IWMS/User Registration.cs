@@ -36,6 +36,7 @@ namespace IWMS
             }
 
             dtpDOB.Value = DateTime.Today;
+            
         }
 
         private bool checkAgeError()
