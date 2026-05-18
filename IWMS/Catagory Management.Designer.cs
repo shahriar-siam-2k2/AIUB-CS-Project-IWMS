@@ -281,7 +281,6 @@
             Controls.Add(dgvCatagories);
             Name = "Catagory_Management";
             Text = "IWMS - Catagory Management";
-            Load += Catagory_Management_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCatagories).EndInit();
             ResumeLayout(false);
             PerformLayout();

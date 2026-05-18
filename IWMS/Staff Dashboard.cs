@@ -8,11 +8,16 @@ using System.Windows.Forms;
 
 namespace IWMS
 {
-    public partial class Catagory_Management : Form
+    public partial class Staff_Dashboard : Form
     {
-        public Catagory_Management()
+        public Staff_Dashboard()
         {
             InitializeComponent();
+        }
+
+        private void Staff_Dashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
