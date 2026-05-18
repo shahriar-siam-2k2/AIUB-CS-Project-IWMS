@@ -14,5 +14,10 @@ namespace IWMS
         {
             InitializeComponent();
         }
+
+        private void Account_Settings_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
