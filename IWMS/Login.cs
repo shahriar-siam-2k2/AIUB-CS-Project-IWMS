@@ -73,26 +73,22 @@ namespace IWMS
 
         private int ValidateUser(string userName, string userPass)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-            con.Open();
-
             try
             {
-                string query = "SELECT COUNT(1) FROM User_Registration WHERE UserName = @UserName AND Password = @Password";
+                SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                con.Open();
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@UserName", userName);
-                    cmd.Parameters.AddWithValue("@Password", userPass);
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    con.Close();
-                    return count;
-                }
+                string query = "SELECT COUNT(1) FROM User_Registration WHERE UserName = '" + userName + "' AND Password = '" + userPass + "'";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+                return count;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Database Connection Error: \n\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                con.Close();
                 return -1;
             }
         }

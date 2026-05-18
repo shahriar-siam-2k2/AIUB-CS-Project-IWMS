@@ -288,6 +288,7 @@
             // btnRegister
             // 
             btnRegister.BackColor = Color.Cyan;
+            btnRegister.Cursor = Cursors.Hand;
             btnRegister.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.Location = new Point(93, 659);
             btnRegister.Name = "btnRegister";
@@ -342,6 +343,7 @@
             // btnCancel
             // 
             btnCancel.BackColor = Color.FromArgb(255, 128, 128);
+            btnCancel.Cursor = Cursors.Hand;
             btnCancel.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.White;
             btnCancel.Location = new Point(310, 659);

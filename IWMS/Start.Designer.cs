@@ -48,6 +48,7 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.FromArgb(128, 255, 128);
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(177, 161);
             btnLogin.Name = "btnLogin";
@@ -60,6 +61,7 @@
             // btnRegister
             // 
             btnRegister.BackColor = Color.Cyan;
+            btnRegister.Cursor = Cursors.Hand;
             btnRegister.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.Location = new Point(177, 225);
             btnRegister.Name = "btnRegister";
@@ -72,6 +74,7 @@
             // btnContribution
             // 
             btnContribution.BackColor = Color.FromArgb(128, 128, 255);
+            btnContribution.Cursor = Cursors.Hand;
             btnContribution.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnContribution.ForeColor = SystemColors.ButtonHighlight;
             btnContribution.Location = new Point(177, 288);

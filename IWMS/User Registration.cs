@@ -244,25 +244,22 @@ namespace IWMS
                 else
                     gender = "";
 
-                SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-                con.Open();
-
-                string query = "INSERT INTO User_Registration (FullName, UserName, Password, Email, Phone, Address, DOB, Gender, Role) VALUES (@FullName, @UserName, @Password, @Email, @Phone, @Address, @DOB, @Gender, @Role)";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@FullName", fullName);
-                    cmd.Parameters.AddWithValue("@UserName", userName);
-                    cmd.Parameters.AddWithValue("@Password", pass);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Phone", phone);
-                    cmd.Parameters.AddWithValue("@Address", address);
-                    cmd.Parameters.AddWithValue("@DOB", dob);
-                    cmd.Parameters.AddWithValue("@Gender", gender);
-                    cmd.Parameters.AddWithValue("@Role", role);
+                    SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESSS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                    con.Open();
+
+                    string query = "INSERT INTO User_Registration (FullName, UserName, Password, Email, Phone, Address, DOB, Gender, Role) VALUES ('" + fullName + "', '" + userName + "', '" + pass + "', '" + email + "', '" + phone + "', '" + address + "', '" + dob + "', '" + gender + "', '" + role + "')";
+
+                    SqlCommand cmd = new SqlCommand(query, con);
 
                     cmd.ExecuteNonQuery();
                     con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Database Connection Error: \n\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
                 string message = $"Successfully Registered.\n\n" +
@@ -276,7 +273,7 @@ namespace IWMS
                                      $"Gender: {gender}\n\n" +
                                      $"Role: {role}\n\n";
 
-                MessageBox.Show(message);
+                MessageBox.Show(message, "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ClearAllFields();
                 HideAllErrorLabels();

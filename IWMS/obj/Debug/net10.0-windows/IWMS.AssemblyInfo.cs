@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IWMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c81c657ef1a7c7154ea66c9c661cc40ae840ca8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93b91afcf52b51457a06da755d9f6b046f0141e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("IWMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IWMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
