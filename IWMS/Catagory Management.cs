@@ -14,5 +14,10 @@ namespace IWMS
         {
             InitializeComponent();
         }
+
+        private void Catagory_Management_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

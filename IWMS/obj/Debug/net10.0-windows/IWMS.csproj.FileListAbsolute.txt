@@ -301,3 +301,5 @@ E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\refint\IWMS.
 E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\IWMS.pdb
 E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\IWMS.genruntimeconfig.cache
 E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\ref\IWMS.dll
+H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Catagory_Management.resources
+H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Properties.Resources.resources

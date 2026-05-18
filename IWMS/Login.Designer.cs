@@ -71,9 +71,9 @@
             lblUserName.ForeColor = SystemColors.ControlLight;
             lblUserName.Location = new Point(106, 132);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(98, 22);
+            lblUserName.Size = new Size(87, 22);
             lblUserName.TabIndex = 3;
-            lblUserName.Text = "UserName :";
+            lblUserName.Text = "UserName";
             lblUserName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblUserPass
@@ -83,9 +83,9 @@
             lblUserPass.ForeColor = SystemColors.ControlLight;
             lblUserPass.Location = new Point(107, 214);
             lblUserPass.Name = "lblUserPass";
-            lblUserPass.Size = new Size(92, 22);
+            lblUserPass.Size = new Size(81, 22);
             lblUserPass.TabIndex = 4;
-            lblUserPass.Text = "Password :";
+            lblUserPass.Text = "Password";
             lblUserPass.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtUserName

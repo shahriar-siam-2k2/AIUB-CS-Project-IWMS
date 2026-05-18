@@ -97,6 +97,7 @@
             Name = "Start";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Start";
+            Load += Start_Load;
             ResumeLayout(false);
             PerformLayout();
         }

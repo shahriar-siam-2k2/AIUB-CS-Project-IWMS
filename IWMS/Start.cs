@@ -25,5 +25,10 @@ namespace IWMS
             lg.Show();
             this.Hide();
         }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
