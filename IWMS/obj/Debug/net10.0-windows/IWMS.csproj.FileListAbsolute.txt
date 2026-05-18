@@ -305,3 +305,4 @@ H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Properties.Resources.resources
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Staff_Dashboard.resources
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Account_Settings.resources
+H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.Admin_Dashboard.resources

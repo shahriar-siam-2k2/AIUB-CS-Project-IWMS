@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_Dashboard));
             lblTitle = new Label();
             lblSubtitle = new Label();
-            lblFullName = new Label();
             btnViewProducts = new Button();
             btnStock = new Button();
             btnAccount = new Button();
@@ -59,6 +57,7 @@
             iconDispatched = new PictureBox();
             lblDispatched = new Label();
             lblDispatchedTitle = new Label();
+            lblFullName = new Label();
             pnlTotalProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconTotalProducts).BeginInit();
             pnlStatus.SuspendLayout();
@@ -89,17 +88,6 @@
             lblSubtitle.TabIndex = 5;
             lblSubtitle.Text = "Staff Dashboard";
             lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblFullName
-            // 
-            lblFullName.AutoSize = true;
-            lblFullName.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFullName.Location = new Point(315, 84);
-            lblFullName.Name = "lblFullName";
-            lblFullName.Size = new Size(178, 24);
-            lblFullName.TabIndex = 5;
-            lblFullName.Text = "Welcome Full Name";
-            lblFullName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnViewProducts
             // 
@@ -155,7 +143,7 @@
             // 
             lblTime.AutoSize = true;
             lblTime.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTime.Location = new Point(681, 86);
+            lblTime.Location = new Point(686, 86);
             lblTime.Name = "lblTime";
             lblTime.Size = new Size(97, 22);
             lblTime.TabIndex = 5;
@@ -186,7 +174,7 @@
             // 
             // iconTotalProducts
             // 
-            iconTotalProducts.Image = (Image)resources.GetObject("iconTotalProducts.Image");
+            iconTotalProducts.Image = Properties.Resources.box;
             iconTotalProducts.Location = new Point(32, 9);
             iconTotalProducts.Name = "iconTotalProducts";
             iconTotalProducts.Size = new Size(100, 50);
@@ -240,7 +228,7 @@
             // 
             // iconStatus
             // 
-            iconStatus.Image = (Image)resources.GetObject("iconStatus.Image");
+            iconStatus.Image = Properties.Resources.checkmark;
             iconStatus.Location = new Point(32, 8);
             iconStatus.Name = "iconStatus";
             iconStatus.Size = new Size(100, 50);
@@ -294,7 +282,7 @@
             // 
             // iconReceived
             // 
-            iconReceived.Image = (Image)resources.GetObject("iconReceived.Image");
+            iconReceived.Image = Properties.Resources.warehouse;
             iconReceived.Location = new Point(32, 8);
             iconReceived.Name = "iconReceived";
             iconReceived.Size = new Size(100, 50);
@@ -348,7 +336,7 @@
             // 
             // iconDispatched
             // 
-            iconDispatched.Image = (Image)resources.GetObject("iconDispatched.Image");
+            iconDispatched.Image = Properties.Resources.delivery_truck;
             iconDispatched.Location = new Point(32, 9);
             iconDispatched.Name = "iconDispatched";
             iconDispatched.Size = new Size(100, 50);
@@ -378,11 +366,23 @@
             lblDispatchedTitle.Text = "Dispatched Today";
             lblDispatchedTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblFullName
+            // 
+            lblFullName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lblFullName.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFullName.Location = new Point(221, 84);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(352, 24);
+            lblFullName.TabIndex = 32;
+            lblFullName.Text = "Welcome Full Name";
+            lblFullName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Staff_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblFullName);
             Controls.Add(pnlDispatched);
             Controls.Add(pnlReceived);
             Controls.Add(label12);
@@ -396,7 +396,6 @@
             Controls.Add(btnViewProducts);
             Controls.Add(lblUserName);
             Controls.Add(lblTime);
-            Controls.Add(lblFullName);
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "Staff_Dashboard";
@@ -423,7 +422,6 @@
 
         private Label lblTitle;
         private Label lblSubtitle;
-        private Label lblFullName;
         private Button btnViewProducts;
         private Button btnStock;
         private Button btnAccount;
@@ -450,5 +448,6 @@
         private PictureBox iconStatus;
         private PictureBox iconReceived;
         private PictureBox iconDispatched;
+        private Label lblFullName;
     }
 }
