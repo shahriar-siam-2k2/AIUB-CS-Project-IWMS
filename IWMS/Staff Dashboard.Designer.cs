@@ -32,41 +32,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff_Dashboard));
             lblTitle = new Label();
             lblSubtitle = new Label();
-            label1 = new Label();
-            btnAdd = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            btnCancel = new Button();
-            label2 = new Label();
+            lblFullName = new Label();
+            btnViewProducts = new Button();
+            btnStock = new Button();
+            btnAccount = new Button();
+            btnLogout = new Button();
+            lblTime = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            label3 = new Label();
-            panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            label5 = new Label();
-            label4 = new Label();
+            lblUserName = new Label();
+            pnlTotalProduct = new Panel();
+            iconTotalProducts = new PictureBox();
+            lblTotalProducts = new Label();
+            lblTotalProductsTitle = new Label();
             label6 = new Label();
-            panel2 = new Panel();
-            pictureBox2 = new PictureBox();
-            label8 = new Label();
-            label9 = new Label();
+            pnlStatus = new Panel();
+            iconStatus = new PictureBox();
+            lblStatus = new Label();
+            lblStatusTitle = new Label();
             label7 = new Label();
-            panel3 = new Panel();
-            pictureBox3 = new PictureBox();
-            label10 = new Label();
-            label11 = new Label();
+            pnlReceived = new Panel();
+            iconReceived = new PictureBox();
+            lblReceived = new Label();
+            lblReceivedTitle = new Label();
             label12 = new Label();
-            panel4 = new Panel();
-            pictureBox4 = new PictureBox();
-            label13 = new Label();
-            label14 = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            pnlDispatched = new Panel();
+            iconDispatched = new PictureBox();
+            lblDispatched = new Label();
+            lblDispatchedTitle = new Label();
+            pnlTotalProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconTotalProducts).BeginInit();
+            pnlStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconStatus).BeginInit();
+            pnlReceived.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconReceived).BeginInit();
+            pnlDispatched.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)iconDispatched).BeginInit();
             SuspendLayout();
             // 
             // lblTitle
@@ -90,131 +90,131 @@
             lblSubtitle.Text = "Staff Dashboard";
             lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblFullName
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(315, 84);
-            label1.Name = "label1";
-            label1.Size = new Size(178, 24);
-            label1.TabIndex = 5;
-            label1.Text = "Welcome Full Name";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lblFullName.AutoSize = true;
+            lblFullName.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFullName.Location = new Point(315, 84);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(178, 24);
+            lblFullName.TabIndex = 5;
+            lblFullName.Text = "Welcome Full Name";
+            lblFullName.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnAdd
+            // btnViewProducts
             // 
-            btnAdd.BackColor = Color.Yellow;
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(68, 316);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(195, 45);
-            btnAdd.TabIndex = 25;
-            btnAdd.Text = "View Products";
-            btnAdd.UseVisualStyleBackColor = false;
+            btnViewProducts.BackColor = Color.Yellow;
+            btnViewProducts.Cursor = Cursors.Hand;
+            btnViewProducts.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnViewProducts.Location = new Point(68, 316);
+            btnViewProducts.Name = "btnViewProducts";
+            btnViewProducts.Size = new Size(195, 45);
+            btnViewProducts.TabIndex = 25;
+            btnViewProducts.Text = "View Products";
+            btnViewProducts.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnStock
             // 
-            button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(305, 316);
-            button1.Name = "button1";
-            button1.Size = new Size(195, 45);
-            button1.TabIndex = 25;
-            button1.Text = "Stock In/Out";
-            button1.UseVisualStyleBackColor = false;
+            btnStock.BackColor = Color.FromArgb(255, 192, 128);
+            btnStock.Cursor = Cursors.Hand;
+            btnStock.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStock.Location = new Point(305, 316);
+            btnStock.Name = "btnStock";
+            btnStock.Size = new Size(195, 45);
+            btnStock.TabIndex = 25;
+            btnStock.Text = "Stock In/Out";
+            btnStock.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnAccount
             // 
-            button2.BackColor = Color.FromArgb(128, 128, 255);
-            button2.Cursor = Cursors.Hand;
-            button2.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(548, 316);
-            button2.Name = "button2";
-            button2.Size = new Size(195, 45);
-            button2.TabIndex = 25;
-            button2.Text = "Account Settings";
-            button2.UseVisualStyleBackColor = false;
+            btnAccount.BackColor = Color.FromArgb(128, 128, 255);
+            btnAccount.Cursor = Cursors.Hand;
+            btnAccount.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAccount.ForeColor = Color.White;
+            btnAccount.Location = new Point(548, 316);
+            btnAccount.Name = "btnAccount";
+            btnAccount.Size = new Size(195, 45);
+            btnAccount.TabIndex = 25;
+            btnAccount.Text = "Account Settings";
+            btnAccount.UseVisualStyleBackColor = false;
             // 
-            // btnCancel
+            // btnLogout
             // 
-            btnCancel.BackColor = Color.FromArgb(255, 128, 128);
-            btnCancel.Cursor = Cursors.Hand;
-            btnCancel.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(305, 382);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(195, 45);
-            btnCancel.TabIndex = 30;
-            btnCancel.Text = "Logout";
-            btnCancel.UseVisualStyleBackColor = false;
+            btnLogout.BackColor = Color.FromArgb(255, 128, 128);
+            btnLogout.Cursor = Cursors.Hand;
+            btnLogout.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(305, 382);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(195, 45);
+            btnLogout.TabIndex = 30;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblTime
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(681, 86);
-            label2.Name = "label2";
-            label2.Size = new Size(97, 22);
-            label2.TabIndex = 5;
-            label2.Text = "Server Time";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblTime.AutoSize = true;
+            lblTime.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Location = new Point(681, 86);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(97, 22);
+            lblTime.TabIndex = 5;
+            lblTime.Text = "Server Time";
+            lblTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblUserName
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(22, 84);
-            label3.Name = "label3";
-            label3.Size = new Size(81, 22);
-            label3.TabIndex = 5;
-            label3.Text = "UserName";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            lblUserName.AutoSize = true;
+            lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUserName.Location = new Point(22, 84);
+            lblUserName.Name = "lblUserName";
+            lblUserName.Size = new Size(81, 22);
+            lblUserName.TabIndex = 5;
+            lblUserName.Text = "UserName";
+            lblUserName.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // pnlTotalProduct
             // 
-            panel1.BackColor = Color.FromArgb(192, 192, 255);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
-            panel1.Location = new Point(22, 127);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(169, 162);
-            panel1.TabIndex = 31;
+            pnlTotalProduct.BackColor = Color.FromArgb(192, 192, 255);
+            pnlTotalProduct.Controls.Add(iconTotalProducts);
+            pnlTotalProduct.Controls.Add(lblTotalProducts);
+            pnlTotalProduct.Controls.Add(lblTotalProductsTitle);
+            pnlTotalProduct.Location = new Point(22, 127);
+            pnlTotalProduct.Name = "pnlTotalProduct";
+            pnlTotalProduct.Size = new Size(169, 162);
+            pnlTotalProduct.TabIndex = 31;
             // 
-            // pictureBox1
+            // iconTotalProducts
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(32, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            iconTotalProducts.Image = (Image)resources.GetObject("iconTotalProducts.Image");
+            iconTotalProducts.Location = new Point(32, 9);
+            iconTotalProducts.Name = "iconTotalProducts";
+            iconTotalProducts.Size = new Size(100, 50);
+            iconTotalProducts.SizeMode = PictureBoxSizeMode.Zoom;
+            iconTotalProducts.TabIndex = 6;
+            iconTotalProducts.TabStop = false;
             // 
-            // label5
+            // lblTotalProducts
             // 
-            label5.Anchor = AnchorStyles.Top;
-            label5.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 93);
-            label5.Name = "label5";
-            label5.Size = new Size(142, 60);
-            label5.TabIndex = 5;
-            label5.Text = "1000";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            lblTotalProducts.Anchor = AnchorStyles.Top;
+            lblTotalProducts.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalProducts.Location = new Point(12, 93);
+            lblTotalProducts.Name = "lblTotalProducts";
+            lblTotalProducts.Size = new Size(142, 60);
+            lblTotalProducts.TabIndex = 5;
+            lblTotalProducts.Text = "1000";
+            lblTotalProducts.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblTotalProductsTitle
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(13, 69);
-            label4.Name = "label4";
-            label4.Size = new Size(139, 24);
-            label4.TabIndex = 5;
-            label4.Text = "Total Products";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            lblTotalProductsTitle.AutoSize = true;
+            lblTotalProductsTitle.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalProductsTitle.Location = new Point(13, 69);
+            lblTotalProductsTitle.Name = "lblTotalProductsTitle";
+            lblTotalProductsTitle.Size = new Size(139, 24);
+            lblTotalProductsTitle.TabIndex = 5;
+            lblTotalProductsTitle.Text = "Total Products";
+            lblTotalProductsTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -227,48 +227,48 @@
             label6.Text = "Total Products";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // pnlStatus
             // 
-            panel2.BackColor = Color.FromArgb(192, 255, 255);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(label9);
-            panel2.Location = new Point(220, 127);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(169, 162);
-            panel2.TabIndex = 31;
+            pnlStatus.BackColor = Color.FromArgb(192, 255, 255);
+            pnlStatus.Controls.Add(iconStatus);
+            pnlStatus.Controls.Add(lblStatus);
+            pnlStatus.Controls.Add(lblStatusTitle);
+            pnlStatus.Location = new Point(220, 127);
+            pnlStatus.Name = "pnlStatus";
+            pnlStatus.Size = new Size(169, 162);
+            pnlStatus.TabIndex = 31;
             // 
-            // pictureBox2
+            // iconStatus
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(32, 8);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 50);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
+            iconStatus.Image = (Image)resources.GetObject("iconStatus.Image");
+            iconStatus.Location = new Point(32, 8);
+            iconStatus.Name = "iconStatus";
+            iconStatus.Size = new Size(100, 50);
+            iconStatus.SizeMode = PictureBoxSizeMode.Zoom;
+            iconStatus.TabIndex = 6;
+            iconStatus.TabStop = false;
             // 
-            // label8
+            // lblStatus
             // 
-            label8.Anchor = AnchorStyles.Top;
-            label8.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(13, 92);
-            label8.Name = "label8";
-            label8.Size = new Size(142, 60);
-            label8.TabIndex = 5;
-            label8.Text = "OK";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
+            lblStatus.Anchor = AnchorStyles.Top;
+            lblStatus.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStatus.Location = new Point(13, 92);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new Size(142, 60);
+            lblStatus.TabIndex = 5;
+            lblStatus.Text = "OK";
+            lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // lblStatusTitle
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(22, 67);
-            label9.Name = "label9";
-            label9.Size = new Size(120, 24);
-            label9.TabIndex = 5;
-            label9.Text = "Stock Status";
-            label9.TextAlign = ContentAlignment.MiddleCenter;
+            lblStatusTitle.AutoSize = true;
+            lblStatusTitle.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStatusTitle.Location = new Point(22, 67);
+            lblStatusTitle.Name = "lblStatusTitle";
+            lblStatusTitle.Size = new Size(120, 24);
+            lblStatusTitle.TabIndex = 5;
+            lblStatusTitle.Text = "Stock Status";
+            lblStatusTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -281,48 +281,48 @@
             label7.Text = "Total Products";
             label7.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // pnlReceived
             // 
-            panel3.BackColor = Color.FromArgb(192, 255, 192);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(label10);
-            panel3.Controls.Add(label11);
-            panel3.Location = new Point(415, 127);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(169, 162);
-            panel3.TabIndex = 31;
+            pnlReceived.BackColor = Color.FromArgb(192, 255, 192);
+            pnlReceived.Controls.Add(iconReceived);
+            pnlReceived.Controls.Add(lblReceived);
+            pnlReceived.Controls.Add(lblReceivedTitle);
+            pnlReceived.Location = new Point(415, 127);
+            pnlReceived.Name = "pnlReceived";
+            pnlReceived.Size = new Size(169, 162);
+            pnlReceived.TabIndex = 31;
             // 
-            // pictureBox3
+            // iconReceived
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(32, 8);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 50);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
+            iconReceived.Image = (Image)resources.GetObject("iconReceived.Image");
+            iconReceived.Location = new Point(32, 8);
+            iconReceived.Name = "iconReceived";
+            iconReceived.Size = new Size(100, 50);
+            iconReceived.SizeMode = PictureBoxSizeMode.Zoom;
+            iconReceived.TabIndex = 6;
+            iconReceived.TabStop = false;
             // 
-            // label10
+            // lblReceived
             // 
-            label10.Anchor = AnchorStyles.Top;
-            label10.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(12, 89);
-            label10.Name = "label10";
-            label10.Size = new Size(142, 60);
-            label10.TabIndex = 5;
-            label10.Text = "130";
-            label10.TextAlign = ContentAlignment.MiddleCenter;
+            lblReceived.Anchor = AnchorStyles.Top;
+            lblReceived.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblReceived.Location = new Point(12, 89);
+            lblReceived.Name = "lblReceived";
+            lblReceived.Size = new Size(142, 60);
+            lblReceived.TabIndex = 5;
+            lblReceived.Text = "130";
+            lblReceived.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // lblReceivedTitle
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(7, 66);
-            label11.Name = "label11";
-            label11.Size = new Size(151, 24);
-            label11.TabIndex = 5;
-            label11.Text = "Received Today";
-            label11.TextAlign = ContentAlignment.MiddleCenter;
+            lblReceivedTitle.AutoSize = true;
+            lblReceivedTitle.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblReceivedTitle.Location = new Point(7, 66);
+            lblReceivedTitle.Name = "lblReceivedTitle";
+            lblReceivedTitle.Size = new Size(151, 24);
+            lblReceivedTitle.TabIndex = 5;
+            lblReceivedTitle.Text = "Received Today";
+            lblReceivedTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -335,85 +335,86 @@
             label12.Text = "Total Products";
             label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel4
+            // pnlDispatched
             // 
-            panel4.BackColor = Color.FromArgb(255, 224, 192);
-            panel4.Controls.Add(pictureBox4);
-            panel4.Controls.Add(label13);
-            panel4.Controls.Add(label14);
-            panel4.Location = new Point(609, 127);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(169, 162);
-            panel4.TabIndex = 31;
+            pnlDispatched.BackColor = Color.FromArgb(255, 224, 192);
+            pnlDispatched.Controls.Add(iconDispatched);
+            pnlDispatched.Controls.Add(lblDispatched);
+            pnlDispatched.Controls.Add(lblDispatchedTitle);
+            pnlDispatched.Location = new Point(609, 127);
+            pnlDispatched.Name = "pnlDispatched";
+            pnlDispatched.Size = new Size(169, 162);
+            pnlDispatched.TabIndex = 31;
             // 
-            // pictureBox4
+            // iconDispatched
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(32, 9);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(100, 50);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 6;
-            pictureBox4.TabStop = false;
+            iconDispatched.Image = (Image)resources.GetObject("iconDispatched.Image");
+            iconDispatched.Location = new Point(32, 9);
+            iconDispatched.Name = "iconDispatched";
+            iconDispatched.Size = new Size(100, 50);
+            iconDispatched.SizeMode = PictureBoxSizeMode.Zoom;
+            iconDispatched.TabIndex = 6;
+            iconDispatched.TabStop = false;
             // 
-            // label13
+            // lblDispatched
             // 
-            label13.Anchor = AnchorStyles.Top;
-            label13.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(12, 89);
-            label13.Name = "label13";
-            label13.Size = new Size(142, 60);
-            label13.TabIndex = 5;
-            label13.Text = "40";
-            label13.TextAlign = ContentAlignment.MiddleCenter;
+            lblDispatched.Anchor = AnchorStyles.Top;
+            lblDispatched.Font = new Font("Trebuchet MS", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDispatched.Location = new Point(12, 89);
+            lblDispatched.Name = "lblDispatched";
+            lblDispatched.Size = new Size(142, 60);
+            lblDispatched.TabIndex = 5;
+            lblDispatched.Text = "40";
+            lblDispatched.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // lblDispatchedTitle
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(2, 67);
-            label14.Name = "label14";
-            label14.Size = new Size(166, 24);
-            label14.TabIndex = 5;
-            label14.Text = "Dispatched Today";
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            lblDispatchedTitle.AutoSize = true;
+            lblDispatchedTitle.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDispatchedTitle.Location = new Point(2, 67);
+            lblDispatchedTitle.Name = "lblDispatchedTitle";
+            lblDispatchedTitle.Size = new Size(166, 24);
+            lblDispatchedTitle.TabIndex = 5;
+            lblDispatchedTitle.Text = "Dispatched Today";
+            lblDispatchedTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Staff_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
+            Controls.Add(pnlDispatched);
+            Controls.Add(pnlReceived);
             Controls.Add(label12);
-            Controls.Add(panel2);
+            Controls.Add(pnlStatus);
             Controls.Add(label7);
-            Controls.Add(panel1);
+            Controls.Add(pnlTotalProduct);
             Controls.Add(label6);
-            Controls.Add(btnCancel);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(btnAdd);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(btnLogout);
+            Controls.Add(btnAccount);
+            Controls.Add(btnStock);
+            Controls.Add(btnViewProducts);
+            Controls.Add(lblUserName);
+            Controls.Add(lblTime);
+            Controls.Add(lblFullName);
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "Staff_Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Staff Dashboard";
             Load += Staff_Dashboard_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            pnlTotalProduct.ResumeLayout(false);
+            pnlTotalProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconTotalProducts).EndInit();
+            pnlStatus.ResumeLayout(false);
+            pnlStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconStatus).EndInit();
+            pnlReceived.ResumeLayout(false);
+            pnlReceived.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconReceived).EndInit();
+            pnlDispatched.ResumeLayout(false);
+            pnlDispatched.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)iconDispatched).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -422,32 +423,32 @@
 
         private Label lblTitle;
         private Label lblSubtitle;
-        private Label label1;
-        private Button btnAdd;
-        private Button button1;
-        private Button button2;
-        private Button btnCancel;
-        private Label label2;
+        private Label lblFullName;
+        private Button btnViewProducts;
+        private Button btnStock;
+        private Button btnAccount;
+        private Button btnLogout;
+        private Label lblTime;
         private System.Windows.Forms.Timer timer1;
-        private Label label3;
-        private Panel panel1;
-        private Label label4;
-        private Label label5;
+        private Label lblUserName;
+        private Panel pnlTotalProduct;
+        private Label lblTotalProductsTitle;
+        private Label lblTotalProducts;
         private Label label6;
-        private Panel panel2;
-        private Label label8;
-        private Label label9;
+        private Panel pnlStatus;
+        private Label lblStatus;
+        private Label lblStatusTitle;
         private Label label7;
-        private Panel panel3;
-        private Label label10;
-        private Label label11;
+        private Panel pnlReceived;
+        private Label lblReceived;
+        private Label lblReceivedTitle;
         private Label label12;
-        private Panel panel4;
-        private Label label13;
-        private Label label14;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
+        private Panel pnlDispatched;
+        private Label lblDispatched;
+        private Label lblDispatchedTitle;
+        private PictureBox iconTotalProducts;
+        private PictureBox iconStatus;
+        private PictureBox iconReceived;
+        private PictureBox iconDispatched;
     }
 }

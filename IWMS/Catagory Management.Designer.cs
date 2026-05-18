@@ -280,6 +280,7 @@
             Controls.Add(lblTitle);
             Controls.Add(dgvCatagories);
             Name = "Catagory_Management";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Catagory Management";
             ((System.ComponentModel.ISupportInitialize)dgvCatagories).EndInit();
             ResumeLayout(false);
