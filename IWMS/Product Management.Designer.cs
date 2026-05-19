@@ -30,7 +30,7 @@
         {
             dgvCatagories = new DataGridView();
             lblTitle = new Label();
-            lblSubtitle = new Label();
+            lblProduct = new Label();
             btnAdd = new Button();
             btnUpdate = new Button();
             btnDelete = new Button();
@@ -38,12 +38,10 @@
             lblRole = new Label();
             lblUserName = new Label();
             btnRefresh = new Button();
-            lblCatID = new Label();
+            lblProductID = new Label();
             txtCatID = new TextBox();
-            lblCatName = new Label();
+            lblProductName = new Label();
             txtCatName = new TextBox();
-            lblDescription = new Label();
-            txtDescription = new RichTextBox();
             txtSearch = new TextBox();
             lblSearch = new Label();
             btnSearch = new Button();
@@ -68,16 +66,16 @@
             lblTitle.TabIndex = 3;
             lblTitle.Text = "Inventory and Warehouse Management System";
             // 
-            // lblSubtitle
+            // lblProduct
             // 
-            lblSubtitle.AutoSize = true;
-            lblSubtitle.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSubtitle.Location = new Point(314, 29);
-            lblSubtitle.Name = "lblSubtitle";
-            lblSubtitle.Size = new Size(199, 24);
-            lblSubtitle.TabIndex = 4;
-            lblSubtitle.Text = "Catagory Management";
-            lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
+            lblProduct.AutoSize = true;
+            lblProduct.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProduct.Location = new Point(314, 29);
+            lblProduct.Name = "lblProduct";
+            lblProduct.Size = new Size(189, 24);
+            lblProduct.TabIndex = 4;
+            lblProduct.Text = "Product Management";
+            lblProduct.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAdd
             // 
@@ -163,16 +161,16 @@
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
             // 
-            // lblCatID
+            // lblProductID
             // 
-            lblCatID.AutoSize = true;
-            lblCatID.Font = new Font("Trebuchet MS", 11.25F);
-            lblCatID.Location = new Point(8, 162);
-            lblCatID.Name = "lblCatID";
-            lblCatID.Size = new Size(87, 20);
-            lblCatID.TabIndex = 4;
-            lblCatID.Text = "Catagory ID";
-            lblCatID.TextAlign = ContentAlignment.MiddleCenter;
+            lblProductID.AutoSize = true;
+            lblProductID.Font = new Font("Trebuchet MS", 11.25F);
+            lblProductID.Location = new Point(8, 162);
+            lblProductID.Name = "lblProductID";
+            lblProductID.Size = new Size(77, 20);
+            lblProductID.TabIndex = 4;
+            lblProductID.Text = "Product ID";
+            lblProductID.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtCatID
             // 
@@ -185,16 +183,16 @@
             txtCatID.Size = new Size(165, 25);
             txtCatID.TabIndex = 33;
             // 
-            // lblCatName
+            // lblProductName
             // 
-            lblCatName.AutoSize = true;
-            lblCatName.Font = new Font("Trebuchet MS", 11.25F);
-            lblCatName.Location = new Point(8, 220);
-            lblCatName.Name = "lblCatName";
-            lblCatName.Size = new Size(113, 20);
-            lblCatName.TabIndex = 4;
-            lblCatName.Text = "Catagory Name";
-            lblCatName.TextAlign = ContentAlignment.MiddleCenter;
+            lblProductName.AutoSize = true;
+            lblProductName.Font = new Font("Trebuchet MS", 11.25F);
+            lblProductName.Location = new Point(8, 220);
+            lblProductName.Name = "lblProductName";
+            lblProductName.Size = new Size(108, 20);
+            lblProductName.TabIndex = 4;
+            lblProductName.Text = "Product  Name";
+            lblProductName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtCatName
             // 
@@ -203,26 +201,6 @@
             txtCatName.Name = "txtCatName";
             txtCatName.Size = new Size(165, 23);
             txtCatName.TabIndex = 33;
-            // 
-            // lblDescription
-            // 
-            lblDescription.AutoSize = true;
-            lblDescription.Font = new Font("Trebuchet MS", 11.25F);
-            lblDescription.Location = new Point(8, 274);
-            lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(83, 20);
-            lblDescription.TabIndex = 4;
-            lblDescription.Text = "Description";
-            lblDescription.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtDescription
-            // 
-            txtDescription.Font = new Font("Trebuchet MS", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(12, 297);
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(165, 126);
-            txtDescription.TabIndex = 34;
-            txtDescription.Text = "";
             // 
             // txtSearch
             // 
@@ -238,9 +216,9 @@
             lblSearch.Font = new Font("Trebuchet MS", 11.25F);
             lblSearch.Location = new Point(10, 44);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(129, 20);
+            lblSearch.Size = new Size(114, 20);
             lblSearch.TabIndex = 35;
-            lblSearch.Text = "Search Catagories";
+            lblSearch.Text = "Search Products";
             lblSearch.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSearch
@@ -262,7 +240,6 @@
             ClientSize = new Size(800, 562);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
-            Controls.Add(txtDescription);
             Controls.Add(txtCatName);
             Controls.Add(txtCatID);
             Controls.Add(btnRefresh);
@@ -273,10 +250,9 @@
             Controls.Add(btnUpdate);
             Controls.Add(btnSearch);
             Controls.Add(btnAdd);
-            Controls.Add(lblDescription);
-            Controls.Add(lblCatName);
-            Controls.Add(lblCatID);
-            Controls.Add(lblSubtitle);
+            Controls.Add(lblProductName);
+            Controls.Add(lblProductID);
+            Controls.Add(lblProduct);
             Controls.Add(lblTitle);
             Controls.Add(dgvCatagories);
             Name = "Product_Management";
@@ -291,7 +267,7 @@
 
         private DataGridView dgvCatagories;
         private Label lblTitle;
-        private Label lblSubtitle;
+        private Label lblProduct;
         private Button btnAdd;
         private Button btnUpdate;
         private Button btnDelete;
@@ -299,12 +275,10 @@
         private Label lblRole;
         private Label lblUserName;
         private Button btnRefresh;
-        private Label lblCatID;
+        private Label lblProductID;
         private TextBox txtCatID;
-        private Label lblCatName;
+        private Label lblProductName;
         private TextBox txtCatName;
-        private Label lblDescription;
-        private RichTextBox txtDescription;
         private TextBox txtSearch;
         private Label lblSearch;
         private Button btnSearch;
