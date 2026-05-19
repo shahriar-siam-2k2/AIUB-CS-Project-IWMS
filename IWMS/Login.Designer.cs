@@ -39,13 +39,14 @@
             lblUserEmpty = new Label();
             lblPassEmpty = new Label();
             lblShowHidePass = new Label();
+            lblForgotPass = new Label();
             SuspendLayout();
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = SystemColors.ButtonHighlight;
+            lblTitle.ForeColor = Color.SteelBlue;
             lblTitle.Location = new Point(12, 35);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(465, 27);
@@ -56,7 +57,7 @@
             // 
             lblSubtitle.AutoSize = true;
             lblSubtitle.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSubtitle.ForeColor = SystemColors.ControlLight;
+            lblSubtitle.ForeColor = Color.SteelBlue;
             lblSubtitle.Location = new Point(165, 86);
             lblSubtitle.Name = "lblSubtitle";
             lblSubtitle.Size = new Size(150, 27);
@@ -68,7 +69,7 @@
             // 
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserName.ForeColor = SystemColors.ControlLight;
+            lblUserName.ForeColor = Color.SteelBlue;
             lblUserName.Location = new Point(106, 132);
             lblUserName.Name = "lblUserName";
             lblUserName.Size = new Size(87, 22);
@@ -80,7 +81,7 @@
             // 
             lblUserPass.AutoSize = true;
             lblUserPass.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblUserPass.ForeColor = SystemColors.ControlLight;
+            lblUserPass.ForeColor = Color.SteelBlue;
             lblUserPass.Location = new Point(107, 214);
             lblUserPass.Name = "lblUserPass";
             lblUserPass.Size = new Size(81, 22);
@@ -99,7 +100,7 @@
             // txtUserPass
             // 
             txtUserPass.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUserPass.Location = new Point(110, 239);
+            txtUserPass.Location = new Point(110, 237);
             txtUserPass.Name = "txtUserPass";
             txtUserPass.Size = new Size(263, 29);
             txtUserPass.TabIndex = 6;
@@ -171,12 +172,24 @@
             lblShowHidePass.MouseEnter += lblShowHidePass_MouseEnter;
             lblShowHidePass.MouseLeave += lblShowHidePass_MouseLeave;
             // 
+            // lblForgotPass
+            // 
+            lblForgotPass.AutoSize = true;
+            lblForgotPass.ForeColor = Color.SteelBlue;
+            lblForgotPass.Location = new Point(270, 271);
+            lblForgotPass.Name = "lblForgotPass";
+            lblForgotPass.Size = new Size(102, 15);
+            lblForgotPass.TabIndex = 12;
+            lblForgotPass.Text = "Forget password ?";
+            lblForgotPass.Click += label1_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Indigo;
-            ClientSize = new Size(485, 450);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(487, 450);
+            Controls.Add(lblForgotPass);
             Controls.Add(lblShowHidePass);
             Controls.Add(lblPassEmpty);
             Controls.Add(lblUserEmpty);
@@ -209,5 +222,6 @@
         private Label lblUserEmpty;
         private Label lblPassEmpty;
         private Label lblShowHidePass;
+        private Label lblForgotPass;
     }
 }

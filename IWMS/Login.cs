@@ -116,5 +116,10 @@ namespace IWMS
         {
             lblShowHidePass.Font = new Font(lblShowHidePass.Font, FontStyle.Regular);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
