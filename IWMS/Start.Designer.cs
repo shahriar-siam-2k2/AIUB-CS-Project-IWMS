@@ -31,7 +31,6 @@
             lblTitle = new Label();
             btnLogin = new Button();
             btnRegister = new Button();
-            btnContribution = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -71,26 +70,12 @@
             btnRegister.UseVisualStyleBackColor = false;
             btnRegister.Click += btnRegister_Click;
             // 
-            // btnContribution
-            // 
-            btnContribution.BackColor = Color.FromArgb(128, 128, 255);
-            btnContribution.Cursor = Cursors.Hand;
-            btnContribution.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnContribution.ForeColor = SystemColors.ButtonHighlight;
-            btnContribution.Location = new Point(177, 288);
-            btnContribution.Name = "btnContribution";
-            btnContribution.Size = new Size(145, 45);
-            btnContribution.TabIndex = 3;
-            btnContribution.Text = "Contribution";
-            btnContribution.UseVisualStyleBackColor = false;
-            // 
             // Start
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 255);
-            ClientSize = new Size(496, 450);
-            Controls.Add(btnContribution);
+            ClientSize = new Size(496, 372);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
             Controls.Add(lblTitle);
@@ -107,6 +92,5 @@
         private Label lblTitle;
         private Button btnLogin;
         private Button btnRegister;
-        private Button btnContribution;
     }
 }

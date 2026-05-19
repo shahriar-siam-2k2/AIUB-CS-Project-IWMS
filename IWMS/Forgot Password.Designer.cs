@@ -56,7 +56,6 @@
             lblTitle.Size = new Size(465, 27);
             lblTitle.TabIndex = 4;
             lblTitle.Text = "Inventory and Warehouse Management System";
-            lblTitle.Click += lblTitle_Click;
             // 
             // lblChangePass
             // 
@@ -124,7 +123,6 @@
             lblConfPassError.TabIndex = 45;
             lblConfPassError.Text = "Password doesn't match!";
             lblConfPassError.TextAlign = ContentAlignment.MiddleCenter;
-            lblConfPassError.Click += this.lblConfPassError_Click;
             // 
             // lblShowHidePass2
             // 

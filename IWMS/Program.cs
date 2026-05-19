@@ -14,7 +14,7 @@ namespace IWMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.Run(new Start());
+            Application.Run(new Admin_Dashboard());
         }
     }
 }

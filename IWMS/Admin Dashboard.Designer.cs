@@ -37,7 +37,7 @@
             btnAccount = new Button();
             btnLogout = new Button();
             lblTime = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
+            serverTimer = new System.Windows.Forms.Timer(components);
             lblUserName = new Label();
             pnlRegisteredUsers = new Panel();
             iconRegisteredUsers = new PictureBox();
@@ -115,6 +115,7 @@
             btnManageProducts.TabIndex = 25;
             btnManageProducts.Text = "Manage Products";
             btnManageProducts.UseVisualStyleBackColor = false;
+            btnManageProducts.Click += btnManageProducts_Click;
             // 
             // btnStock
             // 
@@ -127,6 +128,7 @@
             btnStock.TabIndex = 25;
             btnStock.Text = "Stock In/Out";
             btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnAccount
             // 
@@ -140,6 +142,7 @@
             btnAccount.TabIndex = 25;
             btnAccount.Text = "Account Settings";
             btnAccount.UseVisualStyleBackColor = false;
+            btnAccount.Click += btnAccount_Click;
             // 
             // btnLogout
             // 
@@ -154,18 +157,23 @@
             btnLogout.TabIndex = 30;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // lblTime
             // 
-            lblTime.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            lblTime.AutoSize = true;
+            lblTime.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTime.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTime.Location = new Point(686, 86);
+            lblTime.Location = new Point(543, 86);
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(97, 22);
+            lblTime.Size = new Size(240, 22);
             lblTime.TabIndex = 5;
-            lblTime.Text = "Server Time";
-            lblTime.TextAlign = ContentAlignment.MiddleCenter;
+            lblTime.Text = "Loading Server Time...";
+            lblTime.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // serverTimer
+            // 
+            serverTimer.Interval = 1000;
+            serverTimer.Tick += serverTimer_Tick;
             // 
             // lblUserName
             // 
@@ -394,6 +402,7 @@
             btnManageUsers.TabIndex = 25;
             btnManageUsers.Text = "Manage Users";
             btnManageUsers.UseVisualStyleBackColor = false;
+            btnManageUsers.Click += btnManageUsers_Click;
             // 
             // btnManageCategories
             // 
@@ -406,6 +415,7 @@
             btnManageCategories.TabIndex = 25;
             btnManageCategories.Text = "Manage Categories";
             btnManageCategories.UseVisualStyleBackColor = false;
+            btnManageCategories.Click += btnManageCategories_Click;
             // 
             // Admin_Dashboard
             // 
@@ -456,7 +466,7 @@
         private Button btnAccount;
         private Button btnLogout;
         private Label lblTime;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer serverTimer;
         private Label lblUserName;
         private Panel pnlRegisteredUsers;
         private Label lblRegisteredUsersTitle;
