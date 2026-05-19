@@ -156,7 +156,7 @@
             btnRefresh.BackColor = Color.FromArgb(192, 192, 255);
             btnRefresh.Cursor = Cursors.Hand;
             btnRefresh.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(48, 494);
+            btnRefresh.Location = new Point(534, 442);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(102, 45);
             btnRefresh.TabIndex = 32;
