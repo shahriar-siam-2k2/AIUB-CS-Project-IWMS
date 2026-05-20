@@ -282,7 +282,6 @@
             // 
             txtPass.CharacterCasing = CharacterCasing.Upper;
             txtPass.Font = new Font("Trebuchet MS", 12F);
-            txtPass.HideSelection = false;
             txtPass.Location = new Point(6, 343);
             txtPass.Name = "txtPass";
             txtPass.Size = new Size(147, 26);

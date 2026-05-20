@@ -13,15 +13,17 @@ namespace IWMS
     {
         private string userName;
         private string fullName;
+        private string role;
 
         string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-        public Admin_Dashboard(string userName, string fullName)
+        public Admin_Dashboard(string userName, string fullName, string role)
         {
             InitializeComponent();
 
             this.userName = userName;
             this.fullName = fullName;
+            this.role = role;
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
@@ -68,14 +70,14 @@ namespace IWMS
 
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
-            User_Management um = new User_Management(userName, fullName);
+            User_Management um = new User_Management(userName, fullName, role);
             um.Show();
             this.Hide();
         }
 
         private void btnManageProducts_Click(object sender, EventArgs e)
         {
-            Product_Management pm = new Product_Management();
+            Product_Management pm = new Product_Management(userName, fullName, role);
             pm.Show();
             this.Hide();
         }

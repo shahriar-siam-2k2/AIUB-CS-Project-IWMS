@@ -9,31 +9,20 @@ namespace IWMS
     {
         string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         string id = "";
-        string userName, fullName;
+        string userName, fullName, role;
 
-        public User_Management(string userName, string fullName)
+        public User_Management(string userName, string fullName, string role)
         {
             this.userName = userName;
             this.fullName = fullName;
+            this.role = role;
             InitializeComponent();
         }
 
         private void User_Management_Load(object sender, EventArgs e)
         {
-            //if (comboRole.Items.Count == 0)
-            //{
-            //    comboRole.Items.Add("Admin");
-            //    comboRole.Items.Add("Staff");
-            //}
-            //if (comboGender.Items.Count == 0)
-            //{
-            //    comboGender.Items.Add("Male");
-            //    comboGender.Items.Add("Female");
-            //    comboGender.Items.Add("Others");
-            //}
-
             lblUserName.Text = userName;
-
+            lblRole.Text = role;
             ShowData();
         }
 
@@ -218,7 +207,7 @@ namespace IWMS
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Admin_Dashboard ad = new Admin_Dashboard(userName, fullName);
+            Admin_Dashboard ad = new Admin_Dashboard(userName, fullName, role);
             ad.Show();
             this.Close();
         }

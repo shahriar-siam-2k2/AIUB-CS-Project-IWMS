@@ -26,6 +26,8 @@ namespace IWMS
 
                 try
                 {
+                    string fullName, role;
+
                     SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                     con.Open();
 
@@ -37,14 +39,14 @@ namespace IWMS
                         {
                             if (reader.Read())
                             {
-                                string fullName = reader["U_FullName"].ToString();
-                                string role = reader["U_Role"].ToString();
+                                fullName = reader["U_FullName"].ToString();
+                                role = reader["U_Role"].ToString();
 
                                 if (role == "Admin")
                                 {
                                     MessageBox.Show("Login Success!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    Admin_Dashboard ad = new Admin_Dashboard(txtUserName.Text, fullName);
+                                    Admin_Dashboard ad = new Admin_Dashboard(txtUserName.Text, fullName, role);
                                     ad.Show();
                                     this.Hide();
                                 }
