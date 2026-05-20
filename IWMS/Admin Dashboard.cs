@@ -84,7 +84,7 @@ namespace IWMS
 
         private void btnManageCategories_Click(object sender, EventArgs e)
         {
-            Catagory_Management cm = new Catagory_Management();
+            Catagory_Management cm = new Catagory_Management(userName, fullName, role);
             cm.Show();
             this.Hide();
         }

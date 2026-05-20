@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvCatagories = new DataGridView();
+            dgvCategories = new DataGridView();
             lblTitle = new Label();
             lblSubtitle = new Label();
             btnAdd = new Button();
@@ -47,16 +47,20 @@
             txtSearch = new TextBox();
             lblSearch = new Label();
             btnSearch = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvCatagories).BeginInit();
+            btnClear = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvCategories).BeginInit();
             SuspendLayout();
             // 
-            // dgvCatagories
+            // dgvCategories
             // 
-            dgvCatagories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCatagories.Location = new Point(195, 69);
-            dgvCatagories.Name = "dgvCatagories";
-            dgvCatagories.Size = new Size(593, 352);
-            dgvCatagories.TabIndex = 0;
+            dgvCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCategories.Location = new Point(195, 69);
+            dgvCategories.MultiSelect = false;
+            dgvCategories.Name = "dgvCategories";
+            dgvCategories.ReadOnly = true;
+            dgvCategories.Size = new Size(593, 352);
+            dgvCategories.TabIndex = 0;
+            dgvCategories.CellClick += dgvCatagories_CellClick;
             // 
             // lblTitle
             // 
@@ -84,24 +88,26 @@
             btnAdd.BackColor = Color.Lime;
             btnAdd.Cursor = Cursors.Hand;
             btnAdd.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdd.Location = new Point(162, 442);
+            btnAdd.Location = new Point(251, 444);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(102, 45);
             btnAdd.TabIndex = 24;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.Yellow;
             btnUpdate.Cursor = Cursors.Hand;
             btnUpdate.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(287, 442);
+            btnUpdate.Location = new Point(376, 444);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(102, 45);
             btnUpdate.TabIndex = 25;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnDelete
             // 
@@ -109,12 +115,13 @@
             btnDelete.Cursor = Cursors.Hand;
             btnDelete.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(410, 442);
+            btnDelete.Location = new Point(499, 444);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(102, 45);
             btnDelete.TabIndex = 26;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnCancel
             // 
@@ -128,6 +135,7 @@
             btnCancel.TabIndex = 29;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // lblRole
             // 
@@ -156,12 +164,13 @@
             btnRefresh.BackColor = Color.FromArgb(192, 192, 255);
             btnRefresh.Cursor = Cursors.Hand;
             btnRefresh.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRefresh.Location = new Point(535, 442);
+            btnRefresh.Location = new Point(624, 444);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(102, 45);
             btnRefresh.TabIndex = 32;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // lblCatID
             // 
@@ -254,6 +263,21 @@
             btnSearch.TabIndex = 24;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.Black;
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(37, 444);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(102, 45);
+            btnClear.TabIndex = 32;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // Catagory_Management
             // 
@@ -265,6 +289,7 @@
             Controls.Add(txtDescription);
             Controls.Add(txtCatName);
             Controls.Add(txtCatID);
+            Controls.Add(btnClear);
             Controls.Add(btnRefresh);
             Controls.Add(lblUserName);
             Controls.Add(lblRole);
@@ -278,18 +303,18 @@
             Controls.Add(lblCatID);
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
-            Controls.Add(dgvCatagories);
+            Controls.Add(dgvCategories);
             Name = "Catagory_Management";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IWMS - Catagory Management";
-            ((System.ComponentModel.ISupportInitialize)dgvCatagories).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCategories).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dgvCatagories;
+        private DataGridView dgvCategories;
         private Label lblTitle;
         private Label lblSubtitle;
         private Button btnAdd;
@@ -308,5 +333,6 @@
         private TextBox txtSearch;
         private Label lblSearch;
         private Button btnSearch;
+        private Button btnClear;
     }
 }
