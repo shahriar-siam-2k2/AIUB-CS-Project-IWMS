@@ -209,11 +209,6 @@ namespace IWMS
                 {
                     lblRoleEmpty.Hide();
                 }
-
-
-
-                //MessageBox.Show("Please fill all the fields and select a gender.");
-                //return;
             }
             else
             {

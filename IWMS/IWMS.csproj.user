@@ -7,9 +7,6 @@
     <Compile Update="Catagory Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forgot Password.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Staff Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -39,7 +39,6 @@
             lblUserEmpty = new Label();
             lblPassEmpty = new Label();
             lblShowHidePass = new Label();
-            lblForgotPass = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -172,24 +171,12 @@
             lblShowHidePass.MouseEnter += lblShowHidePass_MouseEnter;
             lblShowHidePass.MouseLeave += lblShowHidePass_MouseLeave;
             // 
-            // lblForgotPass
-            // 
-            lblForgotPass.AutoSize = true;
-            lblForgotPass.ForeColor = Color.SteelBlue;
-            lblForgotPass.Location = new Point(270, 271);
-            lblForgotPass.Name = "lblForgotPass";
-            lblForgotPass.Size = new Size(102, 15);
-            lblForgotPass.TabIndex = 12;
-            lblForgotPass.Text = "Forget password ?";
-            lblForgotPass.Click += label1_Click;
-            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(487, 450);
-            Controls.Add(lblForgotPass);
             Controls.Add(lblShowHidePass);
             Controls.Add(lblPassEmpty);
             Controls.Add(lblUserEmpty);
@@ -222,6 +209,5 @@
         private Label lblUserEmpty;
         private Label lblPassEmpty;
         private Label lblShowHidePass;
-        private Label lblForgotPass;
     }
 }

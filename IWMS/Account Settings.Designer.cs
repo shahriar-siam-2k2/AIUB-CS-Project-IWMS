@@ -163,6 +163,7 @@
             lblShowHidePass2.Size = new Size(36, 15);
             lblShowHidePass2.TabIndex = 43;
             lblShowHidePass2.Text = "Show";
+            lblShowHidePass2.Click += lblShowHidePass2_Click;
             // 
             // lblShowHidePass1
             // 
@@ -174,6 +175,7 @@
             lblShowHidePass1.Size = new Size(36, 15);
             lblShowHidePass1.TabIndex = 42;
             lblShowHidePass1.Text = "Show";
+            lblShowHidePass1.Click += lblShowHidePass1_Click;
             // 
             // lblConfPassEmpty
             // 
@@ -327,7 +329,6 @@
             // comboRole
             // 
             comboRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboRole.Enabled = false;
             comboRole.Font = new Font("Trebuchet MS", 12F);
             comboRole.FormattingEnabled = true;
             comboRole.Items.AddRange(new object[] { "Admin", "Staff" });
@@ -363,7 +364,6 @@
             txtDOB.Font = new Font("Trebuchet MS", 12F);
             txtDOB.Location = new Point(562, 205);
             txtDOB.Name = "txtDOB";
-            txtDOB.ReadOnly = true;
             txtDOB.Size = new Size(132, 26);
             txtDOB.TabIndex = 46;
             // 
@@ -371,7 +371,6 @@
             // 
             btnRegister.BackColor = Color.Cyan;
             btnRegister.Cursor = Cursors.Hand;
-            btnRegister.Enabled = false;
             btnRegister.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegister.Location = new Point(197, 389);
             btnRegister.Name = "btnRegister";
@@ -379,6 +378,7 @@
             btnRegister.TabIndex = 56;
             btnRegister.Text = "Update";
             btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnUpdate_Click;
             // 
             // btnCancel
             // 
@@ -392,6 +392,7 @@
             btnCancel.TabIndex = 57;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // Account_Settings
             // 

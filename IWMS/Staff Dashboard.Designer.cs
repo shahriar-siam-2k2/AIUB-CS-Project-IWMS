@@ -40,17 +40,14 @@
             iconTotalProducts = new PictureBox();
             lblTotalProducts = new Label();
             lblTotalProductsTitle = new Label();
-            label6 = new Label();
             pnlStatus = new Panel();
             iconStatus = new PictureBox();
             lblStatus = new Label();
             lblStatusTitle = new Label();
-            label7 = new Label();
             pnlReceived = new Panel();
             iconReceived = new PictureBox();
             lblReceived = new Label();
             lblReceivedTitle = new Label();
-            label12 = new Label();
             pnlDispatched = new Panel();
             iconDispatched = new PictureBox();
             lblDispatched = new Label();
@@ -100,6 +97,7 @@
             btnViewProducts.TabIndex = 25;
             btnViewProducts.Text = "View Products";
             btnViewProducts.UseVisualStyleBackColor = false;
+            btnViewProducts.Click += btnViewProducts_Click;
             // 
             // btnStock
             // 
@@ -112,6 +110,7 @@
             btnStock.TabIndex = 25;
             btnStock.Text = "Stock In/Out";
             btnStock.UseVisualStyleBackColor = false;
+            btnStock.Click += btnStock_Click;
             // 
             // btnAccount
             // 
@@ -125,6 +124,7 @@
             btnAccount.TabIndex = 25;
             btnAccount.Text = "Account Settings";
             btnAccount.UseVisualStyleBackColor = false;
+            btnAccount.Click += btnAccount_Click;
             // 
             // btnLogout
             // 
@@ -138,6 +138,7 @@
             btnLogout.TabIndex = 30;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // lblUserName
             // 
@@ -193,17 +194,6 @@
             lblTotalProductsTitle.Text = "Total Products";
             lblTotalProductsTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(232, 173);
-            label6.Name = "label6";
-            label6.Size = new Size(139, 24);
-            label6.TabIndex = 5;
-            label6.Text = "Total Products";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // pnlStatus
             // 
             pnlStatus.BackColor = Color.FromArgb(192, 255, 255);
@@ -247,17 +237,6 @@
             lblStatusTitle.Text = "Stock Status";
             lblStatusTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(427, 173);
-            label7.Name = "label7";
-            label7.Size = new Size(139, 24);
-            label7.TabIndex = 5;
-            label7.Text = "Total Products";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // pnlReceived
             // 
             pnlReceived.BackColor = Color.FromArgb(192, 255, 192);
@@ -300,17 +279,6 @@
             lblReceivedTitle.TabIndex = 5;
             lblReceivedTitle.Text = "Received Today";
             lblReceivedTitle.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Trebuchet MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(621, 173);
-            label12.Name = "label12";
-            label12.Size = new Size(139, 24);
-            label12.TabIndex = 5;
-            label12.Text = "Total Products";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlDispatched
             // 
@@ -391,11 +359,8 @@
             Controls.Add(lblFullName);
             Controls.Add(pnlDispatched);
             Controls.Add(pnlReceived);
-            Controls.Add(label12);
             Controls.Add(pnlStatus);
-            Controls.Add(label7);
             Controls.Add(pnlTotalProduct);
-            Controls.Add(label6);
             Controls.Add(btnLogout);
             Controls.Add(btnAccount);
             Controls.Add(btnStock);
@@ -435,15 +400,12 @@
         private Panel pnlTotalProduct;
         private Label lblTotalProductsTitle;
         private Label lblTotalProducts;
-        private Label label6;
         private Panel pnlStatus;
         private Label lblStatus;
         private Label lblStatusTitle;
-        private Label label7;
         private Panel pnlReceived;
         private Label lblReceived;
         private Label lblReceivedTitle;
-        private Label label12;
         private Panel pnlDispatched;
         private Label lblDispatched;
         private Label lblDispatchedTitle;

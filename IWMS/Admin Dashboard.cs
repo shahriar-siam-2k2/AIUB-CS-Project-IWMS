@@ -91,14 +91,14 @@ namespace IWMS
 
         private void btnStock_Click(object sender, EventArgs e)
         {
-            Transaction t = new Transaction();
+            Transaction t = new Transaction(userName, fullName, role);
             t.Show();
             this.Hide();
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            Account_Settings accs = new Account_Settings();
+            Account_Settings accs = new Account_Settings(fullName, userName, role);
             accs.Show();
             this.Hide();
         }

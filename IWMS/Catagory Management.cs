@@ -19,7 +19,6 @@ namespace IWMS
             this.role = role;
             InitializeComponent();
 
-            // ADD THIS SINGLE LINE TO FORCE THE CONNECTION:
             this.Load += Catagory_Management_Load;
         }
 

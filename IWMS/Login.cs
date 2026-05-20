@@ -26,12 +26,12 @@ namespace IWMS
 
                 try
                 {
-                    string fullName, role;
+                    string userName, fullName, role;
 
                     SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                     con.Open();
 
-                    string query = "SELECT U_FullName, U_Role FROM Users WHERE U_Name = '" + txtUserName.Text + "' AND U_Pass = '" + txtUserPass.Text + "'";
+                    string query = "SELECT U_Name, U_FullName, U_Role FROM Users WHERE U_Name = '" + txtUserName.Text + "' AND U_Pass = '" + txtUserPass.Text + "'";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -39,23 +39,23 @@ namespace IWMS
                         {
                             if (reader.Read())
                             {
+                                userName = reader["U_Name"].ToString();
                                 fullName = reader["U_FullName"].ToString();
                                 role = reader["U_Role"].ToString();
 
+                                MessageBox.Show("Login Success!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 if (role == "Admin")
                                 {
-                                    MessageBox.Show("Login Success!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                                     Admin_Dashboard ad = new Admin_Dashboard(txtUserName.Text, fullName, role);
                                     ad.Show();
                                     this.Hide();
                                 }
                                 else if (role == "Staff")
                                 {
-                                    // You will do the exact same thing for your Staff_Dashboard constructor later
-                                    // Staff_Dashboard sd = new Staff_Dashboard(txtLoginUsername.Text, dbFullName);
-                                    // sd.Show();
-                                    // this.Hide();
+                                    Staff_Dashboard sd = new Staff_Dashboard(txtUserName.Text, fullName, role);
+                                    sd.Show();
+                                    this.Hide();
                                 }
                             }
                             else
