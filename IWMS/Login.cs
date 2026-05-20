@@ -24,13 +24,47 @@ namespace IWMS
                 lblUserEmpty.Hide();
                 lblPassEmpty.Hide();
 
-                if (ValidateUser(txtUserName.Text, txtUserPass.Text) > 0)
+                try
                 {
-                    MessageBox.Show("Welcome " + txtUserName.Text, "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                    con.Open();
+
+                    string query = "SELECT U_FullName, U_Role FROM Users WHERE U_Name = '" + txtUserName.Text + "' AND U_Pass = '" + txtUserPass.Text + "'";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string fullName = reader["U_FullName"].ToString();
+                                string role = reader["U_Role"].ToString();
+
+                                if (role == "Admin")
+                                {
+                                    Admin_Dashboard ad = new Admin_Dashboard(txtUserName.Text, fullName);
+                                    ad.Show();
+                                    this.Hide();
+                                }
+                                else if (role == "Staff")
+                                {
+                                    // You will do the exact same thing for your Staff_Dashboard constructor later
+                                    // Staff_Dashboard sd = new Staff_Dashboard(txtLoginUsername.Text, dbFullName);
+                                    // sd.Show();
+                                    // this.Hide();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Credentials!", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Invalid Credentials", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Database Connection Error: \n\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
 
@@ -69,28 +103,6 @@ namespace IWMS
             Start st = new Start();
             st.Show();
             this.Hide();
-        }
-
-        private int ValidateUser(string userName, string userPass)
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
-                con.Open();
-
-                string query = "SELECT COUNT(1) FROM User_Registration WHERE UserName = '" + userName + "' AND Password = '" + userPass + "'";
-
-                SqlCommand cmd = new SqlCommand(query, con);
-
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                con.Close();
-                return count;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database Connection Error: \n\n" + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return -1;
-            }
         }
 
         private void lblShowHidePass_Click(object sender, EventArgs e)

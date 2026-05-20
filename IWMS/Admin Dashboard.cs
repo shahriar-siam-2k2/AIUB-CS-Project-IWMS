@@ -11,11 +11,17 @@ namespace IWMS
 {
     public partial class Admin_Dashboard : Form
     {
+        private string userName;
+        private string fullName;
+
         string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
-        public Admin_Dashboard()
+        public Admin_Dashboard(string userName, string fullName)
         {
             InitializeComponent();
+
+            this.userName = userName;
+            this.fullName = fullName;
         }
 
         private void Admin_Dashboard_Load(object sender, EventArgs e)
@@ -26,6 +32,9 @@ namespace IWMS
 
         private void LoadSummaries()
         {
+            lblUserName.Text = userName;
+            lblFullName.Text = "Welcome " + fullName;
+
             try
             {
                 SqlConnection con = new SqlConnection(connString);

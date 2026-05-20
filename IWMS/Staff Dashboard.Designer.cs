@@ -35,8 +35,6 @@
             btnStock = new Button();
             btnAccount = new Button();
             btnLogout = new Button();
-            lblTime = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
             lblUserName = new Label();
             pnlTotalProduct = new Panel();
             iconTotalProducts = new PictureBox();
@@ -58,6 +56,8 @@
             lblDispatched = new Label();
             lblDispatchedTitle = new Label();
             lblFullName = new Label();
+            lblTime = new Label();
+            serverTimer = new System.Windows.Forms.Timer(components);
             pnlTotalProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconTotalProducts).BeginInit();
             pnlStatus.SuspendLayout();
@@ -138,17 +138,6 @@
             btnLogout.TabIndex = 30;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
-            // 
-            // lblTime
-            // 
-            lblTime.AutoSize = true;
-            lblTime.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTime.Location = new Point(686, 86);
-            lblTime.Name = "lblTime";
-            lblTime.Size = new Size(97, 22);
-            lblTime.TabIndex = 5;
-            lblTime.Text = "Server Time";
-            lblTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblUserName
             // 
@@ -377,11 +366,28 @@
             lblFullName.Text = "Welcome Full Name";
             lblFullName.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblTime
+            // 
+            lblTime.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTime.Font = new Font("Trebuchet MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTime.Location = new Point(538, 84);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(240, 22);
+            lblTime.TabIndex = 33;
+            lblTime.Text = "Loading Server Time...";
+            lblTime.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // serverTimer
+            // 
+            serverTimer.Interval = 1000;
+            serverTimer.Tick += serverTimer_Tick;
+            // 
             // Staff_Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblTime);
             Controls.Add(lblFullName);
             Controls.Add(pnlDispatched);
             Controls.Add(pnlReceived);
@@ -395,7 +401,6 @@
             Controls.Add(btnStock);
             Controls.Add(btnViewProducts);
             Controls.Add(lblUserName);
-            Controls.Add(lblTime);
             Controls.Add(lblSubtitle);
             Controls.Add(lblTitle);
             Name = "Staff_Dashboard";
@@ -426,8 +431,6 @@
         private Button btnStock;
         private Button btnAccount;
         private Button btnLogout;
-        private Label lblTime;
-        private System.Windows.Forms.Timer timer1;
         private Label lblUserName;
         private Panel pnlTotalProduct;
         private Label lblTotalProductsTitle;
@@ -449,5 +452,7 @@
         private PictureBox iconReceived;
         private PictureBox iconDispatched;
         private Label lblFullName;
+        private Label lblTime;
+        private System.Windows.Forms.Timer serverTimer;
     }
 }

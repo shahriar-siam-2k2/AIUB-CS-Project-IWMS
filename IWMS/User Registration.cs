@@ -246,14 +246,31 @@ namespace IWMS
 
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESSS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
                     con.Open();
+                    int newAdminID;
 
-                    string query = "INSERT INTO User_Registration (FullName, UserName, Password, Email, Phone, Address, DOB, Gender, Role) VALUES ('" + fullName + "', '" + userName + "', '" + pass + "', '" + email + "', '" + phone + "', '" + address + "', '" + dob + "', '" + gender + "', '" + role + "')";
+                    if (role == "Admin")
+                    {
+                        string adminQuery = "INSERT INTO Admins (A_Name) OUTPUT INSERTED.A_ID VALUES ('" + fullName + "')";
+                        SqlCommand adminCmd = new SqlCommand(adminQuery, con);
+                        newAdminID = (int)adminCmd.ExecuteScalar();
 
-                    SqlCommand cmd = new SqlCommand(query, con);
+                        string query = "INSERT INTO Users (U_FullName, U_Name, U_Pass, U_Email, U_Phone, U_Address, U_DOB, U_Gender, U_Role, A_ID) VALUES ('" + fullName + "', '" + userName + "', '" + pass + "', '" + email + "', '" + phone + "', '" + address + "', '" + dob + "', '" + gender + "', '" + role + "', '" + newAdminID + "')";
 
-                    cmd.ExecuteNonQuery();
+                        SqlCommand cmd = new SqlCommand(query, con);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    else if (role == "Staff")
+                    {
+                        string query = "INSERT INTO Users (U_FullName, U_Name, U_Pass, U_Email, U_Phone, U_Address, U_DOB, U_Gender, U_Role) VALUES ('" + fullName + "', '" + userName + "', '" + pass + "', '" + email + "', '" + phone + "', '" + address + "', '" + dob + "', '" + gender + "', '" + role + "')";
+
+                        SqlCommand cmd = new SqlCommand(query, con);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    
                     con.Close();
                 }
                 catch (Exception ex)
