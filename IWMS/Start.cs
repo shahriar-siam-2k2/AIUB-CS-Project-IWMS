@@ -26,6 +26,11 @@ namespace IWMS
             this.Hide();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Start_Load(object sender, EventArgs e)
         {
 

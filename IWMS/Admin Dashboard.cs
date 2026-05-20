@@ -68,7 +68,9 @@ namespace IWMS
 
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
-
+            User_Management um = new User_Management(userName, fullName);
+            um.Show();
+            this.Hide();
         }
 
         private void btnManageProducts_Click(object sender, EventArgs e)

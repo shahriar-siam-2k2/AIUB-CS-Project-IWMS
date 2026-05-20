@@ -42,6 +42,8 @@ namespace IWMS
 
                                 if (role == "Admin")
                                 {
+                                    MessageBox.Show("Login Success!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                     Admin_Dashboard ad = new Admin_Dashboard(txtUserName.Text, fullName);
                                     ad.Show();
                                     this.Hide();
