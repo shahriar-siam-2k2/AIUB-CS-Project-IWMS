@@ -179,9 +179,18 @@ namespace IWMS
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Admin_Dashboard ad = new Admin_Dashboard(userName, fullName, role);
-            ad.Show();
-            this.Close();
+            if (role == "Admin")
+            {
+                Admin_Dashboard ad = new Admin_Dashboard(userName, fullName, role);
+                ad.Show();
+                this.Close();
+            }
+            else if (role == "Staff")
+            {
+                Staff_Dashboard sd = new Staff_Dashboard(userName, fullName, role);
+                sd.Show();
+                this.Close();
+            }
         }
 
         private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)

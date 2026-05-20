@@ -315,3 +315,5 @@ H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\refin
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.pdb
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\IWMS.genruntimeconfig.cache
 H:\Codings\Programming\AIUB-CS-Project-IWMS\IWMS\obj\Debug\net10.0-windows\ref\IWMS.dll
+E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\IWMS.Transaction.resources
+E:\AIUB\Spring 26\OOP2 FINAL\PROJECT\IWMS\obj\Debug\net10.0-windows\IWMS.User_Management.resources

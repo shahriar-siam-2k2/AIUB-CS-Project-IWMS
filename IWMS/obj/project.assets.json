@@ -999,23 +999,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shahr\\.nuget\\packages\\": {},
-    "H:\\Microsoft Visual Studio18\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Farzana Jui\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
+      "projectUniqueName": "E:\\AIUB\\Spring 26\\OOP2 FINAL\\PROJECT\\IWMS\\IWMS.csproj",
       "projectName": "IWMS",
-      "projectPath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\IWMS.csproj",
-      "packagesPath": "C:\\Users\\shahr\\.nuget\\packages\\",
-      "outputPath": "H:\\Codings\\Programming\\AIUB-CS-Project-IWMS\\IWMS\\obj\\",
+      "projectPath": "E:\\AIUB\\Spring 26\\OOP2 FINAL\\PROJECT\\IWMS\\IWMS.csproj",
+      "packagesPath": "C:\\Users\\Farzana Jui\\.nuget\\packages\\",
+      "outputPath": "E:\\AIUB\\Spring 26\\OOP2 FINAL\\PROJECT\\IWMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "H:\\Microsoft Visual Studio18\\Shared\\NuGetPackages"
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\shahr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Farzana Jui\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
