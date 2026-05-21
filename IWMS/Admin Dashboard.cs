@@ -17,6 +17,8 @@ namespace IWMS
 
         string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=IWMS_DB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
+
+        
         public Admin_Dashboard(string userName, string fullName, string role)
         {
             InitializeComponent();
